@@ -2,9 +2,11 @@ require 'madman'
 require 'madman/version'
 
 version Madman::VERSION
+
 help "Render markdown to HTML"
 
 usage "madman render INFILE [OUTFILE] [--rtl]"
+usage "madman render (-h|--help|--version)"
 
 option "--rtl", "Render text Right-to-Left"
 

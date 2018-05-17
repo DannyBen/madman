@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'mister_bin', '~> 0.2'
   s.add_runtime_dependency 'sinatra', '~> 2.0'
   s.add_runtime_dependency 'commonmarker', '~> 0.17'
+  s.add_runtime_dependency 'puma', '~> 3.11'
 
   s.add_development_dependency 'byebug', '~> 10.0'
   s.add_development_dependency 'rdoc', '~> 6.0'
