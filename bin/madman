@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'mister_bin'
+
+runner = MisterBin::Runner.new 'madman', basedir: __dir__
+exitcode =  runner.run ARGV

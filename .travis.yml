@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+  - "2.4.0"
+  - "2.5.0"
+
+notifications:
+  email: false
+
+branches:
+  only: [master]
+
+before_install:
+  - gem install bundler
+
+script: bundle exec rspec
