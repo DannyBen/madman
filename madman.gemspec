@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Danny Ben Shitrit"]
   s.email       = 'db@dannyben.com'
   s.files       = Dir['README.md', 'lib/**/*.*']
-  s.executables = ["madman"]
+  s.executables = Dir['bin/madman*'].map { |f| File.basename f }
   s.homepage    = 'https://github.com/dannyben/madman'
   s.license     = 'MIT'
   s.required_ruby_version = ">= 2.4.0"
