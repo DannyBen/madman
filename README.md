@@ -34,7 +34,7 @@ Key Features
 - GitHub-style markdown generation.
 - Convert markdown to a single HTML file (including CSS).
 - Ad-hoc server to serve a markdown file locally for preview.
-- [Planned] Markdown generation with GitHub API.
+- Markdown generation with GitHub API (optional).
 - [Planned] Table of Contents generation for a single file.
 - [Planned] Table of Contents generation for a folder of markdown files.
 - [Planned] Combine multiple markdown files to one.
