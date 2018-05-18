@@ -8,7 +8,7 @@ help "Run a webserver and serve the markdown file as HTML"
 usage "madman serve INFILE [--port N --bind ADDRESS --rtl]"
 usage "madman serve (-h|--help|--version)"
 
-option "   --rtl", "Render text Right-to-Left"
+option "--rtl", "Render text Right-to-Left"
 option "-p --port N", "Set server port [default: 3000]"
 option "-b --bind ADDRESS", "Set server listen address [default: 0.0.0.0]"
 

@@ -26,6 +26,17 @@ Or with Bundler:
 gem 'madman', require: false
 ```
 
+
+
+Key Features
+--------------------------------------------------
+
+- GitHub-style markdown generation.
+- Convert markdown to a single HTML file (including CSS).
+- Ad-hoc server to serve a markdown file locally for preview.
+
+
+
 Usage
 --------------------------------------------------
 
@@ -83,7 +94,7 @@ Usage:
   madman serve (-h|--help|--version)
 
 Options:
-     --rtl
+  --rtl
     Render text Right-to-Left
 
   -p --port N
