@@ -1,0 +1,29 @@
+Run a webserver and serve the markdown file as HTML
+
+Usage:
+  madman serve INFILE [--port N --bind ADDRESS --rtl]
+  madman serve (-h|--help|--version)
+
+Options:
+     --rtl
+    Render text Right-to-Left
+
+  -p --port N
+    Set server port [default: 3000]
+
+  -b --bind ADDRESS
+    Set server listen address [default: 0.0.0.0]
+
+  -h --help
+    Show this help
+
+  --version
+    Show version number
+
+Parameters:
+  INFILE
+    The input markdown file
+
+Examples:
+  madman serve README.md
+  madman serve README.md -p4000 --rtl

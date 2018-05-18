@@ -23,12 +23,14 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'puma', '~> 3.11'
 
   s.add_development_dependency 'byebug', '~> 10.0'
+  s.add_development_dependency 'github_changelog_generator', '~> 1.14'
+  s.add_development_dependency 'rack-test', '~> 1.0'
   s.add_development_dependency 'rdoc', '~> 6.0'
   s.add_development_dependency 'rspec', '~> 3.6'
+  s.add_development_dependency 'rspec-html-matchers', '~> 0.9'
   s.add_development_dependency 'rspec_fixtures', '~> 0.3'
   s.add_development_dependency 'runfile', '~> 0.10'
   s.add_development_dependency 'runfile-tasks', '~> 0.4'
   s.add_development_dependency 'simplecov', '~> 0.15'
   s.add_development_dependency 'yard', '~> 0.9'
-  s.add_development_dependency 'github_changelog_generator', '~> 1.14'
 end

@@ -1,0 +1,3 @@
+Usage:
+  madman render INFILE [OUTFILE] [--rtl]
+  madman render (-h|--help|--version)

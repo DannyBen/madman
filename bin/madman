@@ -1,5 +1,15 @@
 #!/usr/bin/env ruby
 require 'mister_bin'
+require 'madman/version'
 
-runner = MisterBin::Runner.new 'madman', basedir: __dir__
-exitcode =  runner.run ARGV
+runner = MisterBin::Runner.new 'madman', basedir: __dir__,
+  header: "Madman #{Madman::VERSION}"
+
+
+begin
+  exit runner.run ARGV
+rescue => e
+  puts e.backtrace.reverse if ENV['DEBUG']
+  say! "!txtred!#{e.class}: #{e.message}"
+  exit 1
+end

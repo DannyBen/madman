@@ -1,0 +1,3 @@
+Commands:
+  [1;32mrender  [0mRender markdown to HTML
+  [1;32mserve   [0mRun a webserver and serve the markdown file as HTML
