@@ -42,9 +42,9 @@ action :usage do
     say "Running #{command}..."
     usage << "```"
     usage << "$ #{command}"
-    usage << `#{command}`
+    usage << `#{command}`.chomp
     usage << "```"
-    usage << "---\n"
+    usage << "\n---\n"
   end
   usage << marker
 

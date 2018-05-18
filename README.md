@@ -51,8 +51,8 @@ Madman 0.0.1
 Commands:
   render  Render markdown to HTML
   serve   Run a webserver and serve the markdown file as HTML
-
 ```
+
 ---
 
 ```
@@ -84,8 +84,8 @@ Parameters:
 Examples:
   madman render README.md
   madman render README.md out.html --rtl
-
 ```
+
 ---
 
 ```
@@ -119,8 +119,8 @@ Parameters:
 Examples:
   madman serve README.md
   madman serve README.md -p4000 --rtl
-
 ```
+
 ---
 
 <!-- usage -->
