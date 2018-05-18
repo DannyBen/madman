@@ -6,6 +6,7 @@ module Madman
       @@options = opts
       set :bind, @@options[:bind]
       set :port, @@options[:port]
+      set :public_folder, File.expand_path(File.dirname(@@options[:file]))
     end
 
     def doc

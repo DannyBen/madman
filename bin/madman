@@ -5,7 +5,6 @@ require 'madman/version'
 runner = MisterBin::Runner.new 'madman', basedir: __dir__,
   header: "Madman #{Madman::VERSION}"
 
-
 begin
   exit runner.run ARGV
 rescue => e
