@@ -10,7 +10,11 @@ module Madman
     end
 
     def doc
-      Madman::Document.from_file @@options[:file], rtl: @@options[:rtl]
+      doc_options = {
+        rtl: @@options[:rtl],
+        renderer: (@@options[:renderer] || :default)
+      }
+      Madman::Document.from_file @@options[:file], doc_options
     end
 
     get '/' do

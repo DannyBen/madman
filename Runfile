@@ -53,3 +53,5 @@ action :usage do
   File.write 'README.md', readme
   say "Saved !txtgrn!README.md"  
 end
+
+require_relative 'debug.rb' if File.exist? 'debug.rb'

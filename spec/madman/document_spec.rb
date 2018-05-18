@@ -13,11 +13,11 @@ describe Document do
     end
 
     it "forwards all options to the instance" do
-      expect(subject.opts[:any]).to eq 'thing'
+      expect(subject.options[:any]).to eq 'thing'
     end
 
     it "sets the instance filename" do
-      expect(subject.opts[:filename]).to eq 'spec/fixtures/hello.md'
+      expect(subject.options[:filename]).to eq 'spec/fixtures/hello.md'
     end
   end
 
