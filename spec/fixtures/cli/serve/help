@@ -5,7 +5,7 @@ Usage:
   madman serve (-h|--help|--version)
 
 Options:
-     --rtl
+  --rtl
     Render text Right-to-Left
 
   -p --port N
