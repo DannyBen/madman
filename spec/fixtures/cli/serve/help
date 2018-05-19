@@ -1,12 +1,16 @@
 Run a webserver and serve the markdown file as HTML
 
 Usage:
-  madman serve INFILE [--port N --bind ADDRESS --rtl]
+  madman serve INFILE [--port N --bind ADDRESS --rtl --github]
   madman serve (-h|--help|--version)
 
 Options:
-     --rtl
-    Render text Right-to-Left
+  --github
+    Render using the GitHub API
+    Requires setting the GITHUB_ACCESS_TOKEN environment variable
+
+  --rtl
+    Render text Right to Left.
 
   -p --port N
     Set server port [default: 3000]
@@ -17,13 +21,16 @@ Options:
   -h --help
     Show this help
 
-  --version
-    Show version number
-
 Parameters:
   INFILE
     The input markdown file
 
+Environment Variables:
+  GITHUB_ACCESS_TOKEN
+    Your GitHub API access token
+    Generate one here: https://github.com/settings/tokens
+
 Examples:
   madman serve README.md
+  madman serve README.md --github
   madman serve README.md -p4000 --rtl

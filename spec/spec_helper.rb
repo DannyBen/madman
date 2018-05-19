@@ -15,7 +15,11 @@ ENV['RACK_ENV'] = 'test'
 # That's us!
 include Madman
 
+# Helpers
+require_relative 'rspec_mixin'
+
 RSpec.configure do |c|
+  c.include RSpecMixin
   c.include RSpecHtmlMatchers
   c.include Rack::Test::Methods
 

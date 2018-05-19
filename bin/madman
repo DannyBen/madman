@@ -3,8 +3,7 @@ require 'mister_bin'
 require 'madman/version'
 
 runner = MisterBin::Runner.new 'madman', basedir: __dir__,
-  header: "Madman #{Madman::VERSION}"
-
+  version: Madman::VERSION
 
 begin
   exit runner.run ARGV

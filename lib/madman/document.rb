@@ -1,13 +1,20 @@
 module Madman
   class Document
-    attr_reader :text, :opts
+    attr_reader :text, :options
 
-    def self.from_file(file, opts={})
+    def self.from_file(file, opts=nil)
+      opts ||= {}
       new File.read(file), opts.merge({ filename: file })
     end
 
-    def initialize(text, opts)
-      @text, @opts = text, opts
+    def initialize(text, options=nil)
+      @text = text
+      options ||= {}
+      @options = default_options.merge options
+    end
+
+    def set(new_opts)
+      @options = options.merge new_opts
     end
 
     def render(outfile)
@@ -16,19 +23,27 @@ module Madman
 
     def to_html
       html = template
-      content = CommonMarker.render_html text, :DEFAULT, [:table]
+      content = renderer.render text
       
       replacements = {
         content: content,
         inline_css: css,
         body_attributes: ''
       }
-      replacements[:body_attributes] = "dir='rtl'" if opts[:rtl]
+      replacements[:body_attributes] = "dir='rtl'" if options[:rtl]
 
       html %= replacements
     end
 
     private
+
+    def renderer
+      Renderers.available_renderers[options[:renderer]]
+    end
+
+    def default_options
+      { renderer: :default }
+    end
 
     def template
       @template ||= File.read template_file
