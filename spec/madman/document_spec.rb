@@ -21,6 +21,14 @@ describe Document do
     end
   end
 
+  describe '#set' do
+    it 'adds and overwrites one or more options' do
+      expect(subject.options[:any]).to eq 'thing'      
+      subject.set any: 'and all'
+      expect(subject.options[:any]).to eq 'and all'
+    end
+  end
+
   describe '#render' do
     let(:outfile) { 'tmp/out.html' }
     
