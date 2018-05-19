@@ -2,7 +2,7 @@ module Madman
   module Renderers
     class GitHub
       def self.render(text, opts={})
-        self.client.markdown text
+        client.markdown text
       end
 
       private
