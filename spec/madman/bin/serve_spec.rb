@@ -22,7 +22,7 @@ describe 'bin/madness-serve' do
     it "calls the server" do
       expect(Server).to receive(:options)
       expect(Server).to receive(:run!)
-      subject.run argv
+      expect{ subject.run argv }.to output_fixture('cli/serve/run')
     end
   end
 end

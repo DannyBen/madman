@@ -718,12 +718,119 @@
     </style>
 
     <article class="markdown-body" >
-      <h1>Hello Ace</h1>
+      <h1>
+<a id="user-content-madman" class="anchor" href="#madman" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Madman</h1>
+<p><a href="https://badge.fury.io/rb/madman" rel="nofollow"><img src="https://camo.githubusercontent.com/6a8b18632ce57cf192e23ecb03f4a37b0a360650/68747470733a2f2f62616467652e667572792e696f2f72622f6d61646d616e2e737667" alt="Gem Version" data-canonical-src="https://badge.fury.io/rb/madman.svg" style="max-width:100%;"></a>
+<a href="https://travis-ci.com/DannyBen/madman" rel="nofollow"><img src="https://camo.githubusercontent.com/43359e3f49e883105bb24bf9557b9051e9f90663/68747470733a2f2f7472617669732d63692e636f6d2f44616e6e7942656e2f6d61646d616e2e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.com/DannyBen/madman.svg?branch=master" style="max-width:100%;"></a>
+<a href="https://codeclimate.com/github/DannyBen/madman/maintainability" rel="nofollow"><img src="https://camo.githubusercontent.com/282f8e0dcb6808b536b2e8faa68ee11765a83c80/68747470733a2f2f6170692e636f6465636c696d6174652e636f6d2f76312f6261646765732f35303634343965613938386635353138343235642f6d61696e7461696e6162696c697479" alt="Maintainability" data-canonical-src="https://api.codeclimate.com/v1/badges/506449ea988f5518425d/maintainability" style="max-width:100%;"></a>
+<a href="https://codeclimate.com/github/DannyBen/madman/test_coverage" rel="nofollow"><img src="https://camo.githubusercontent.com/4e3b026f8f9be4a0bd69d30be57eb556daf2766b/68747470733a2f2f6170692e636f6465636c696d6174652e636f6d2f76312f6261646765732f35303634343965613938386635353138343235642f746573745f636f766572616765" alt="Test Coverage" data-canonical-src="https://api.codeclimate.com/v1/badges/506449ea988f5518425d/test_coverage" style="max-width:100%;"></a></p>
+<hr>
+<p>The Markdown Swiss Armi Knife</p>
+<hr>
+<h2>
+<a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+<pre><code>$ gem install madman
+</code></pre>
+<p>Or with Bundler:</p>
+<div class="highlight highlight-source-ruby"><pre>gem <span class="pl-s"><span class="pl-pds">'</span>madman<span class="pl-pds">'</span></span>, <span class="pl-c1">require:</span> <span class="pl-c1">false</span></pre></div>
+<h2>
+<a id="user-content-key-features" class="anchor" href="#key-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Key Features</h2>
 <ul>
-<li>like</li>
-<li>a</li>
-<li>glove</li>
+<li>GitHub-style markdown generation.</li>
+<li>Convert markdown to a single HTML file (including CSS).</li>
+<li>Ad-hoc server to serve a markdown file locally for preview.</li>
+<li>Markdown generation with GitHub API (optional).</li>
+<li>[Planned] Table of Contents generation for a single file.</li>
+<li>[Planned] Table of Contents generation for a folder of markdown files.</li>
+<li>[Planned] Combine multiple markdown files to one.</li>
+<li>[Considered] Web server for an entire folder (like <a href="https://github.com/DannyBen/madness">Madness</a>)</li>
 </ul>
+<h2>
+<a id="user-content-usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>$ madman
+Commands:
+  render  Render markdown to HTML
+  serve   Run a webserver and serve the markdown file as HTML
+</code></pre>
+<hr>
+<pre><code>$ madman render --help
+Render markdown to HTML
+
+Usage:
+  madman render INFILE [OUTFILE] [--rtl --github]
+  madman render (-h|--help|--version)
+
+Options:
+  --github
+    Render using the GitHub API
+    Requires setting the GITHUB_ACCESS_TOKEN environment variable
+
+  --rtl
+    Render text Right to Left
+
+  -h --help
+    Show this help
+
+Parameters:
+  INFILE
+    The input markdown file
+
+  OUTFILE
+    The output HTML file
+    If not provided, the input filename will be used with .html extension
+
+Environment Variables:
+  GITHUB_ACCESS_TOKEN
+    Your GitHub API access token
+    Generate one here: https://github.com/settings/tokens
+
+Examples:
+  madman render README.md
+  madman render README.md --github
+  madman render README.md out.html --rtl
+</code></pre>
+<hr>
+<pre><code>$ madman serve --help
+Run a webserver and serve the markdown file as HTML
+
+This command will start a local server with two endpoints:
+  /         will render the markdown with the default renderer
+  /github   will render with the GitHub API
+
+Usage:
+  madman serve INFILE [--port N --bind ADDRESS --rtl]
+  madman serve (-h|--help|--version)
+
+Options:
+  --rtl
+    Render text Right to Left.
+
+  -p --port N
+    Set server port [default: 3000]
+
+  -b --bind ADDRESS
+    Set server listen address [default: 0.0.0.0]
+
+  -h --help
+    Show this help
+
+Parameters:
+  INFILE
+    The input markdown file
+
+Environment Variables:
+  GITHUB_ACCESS_TOKEN
+    Your GitHub API access token
+    Required only if you wish to use the '/github' endpoint
+    Generate one here: https://github.com/settings/tokens
+
+Examples:
+  madman serve README.md
+  madman serve README.md -p4000 --rtl
+</code></pre>
+<hr>
+
 
     </article>
 

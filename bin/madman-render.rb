@@ -22,16 +22,13 @@ action do |args|
   outfile = args['OUTFILE'] || "#{infile}.html"
   renderer = args['--github'] ? :github : :default
 
-
-  opts = {
-    rtl: args['--rtl'],
-    renderer: renderer
-  }
-
-  doc = Madman::Document.from_file infile, opts
-
+  doc = Madman::Document.from_file infile
+  template = Madman::Template.new :default
+  
   say "Rendering using the #{renderer} renderer"
-  doc.render outfile
+  output = template.render doc.render(renderer)
+
+  File.write outfile, output
   say "Saved !txtgrn!#{outfile}"
 end
 

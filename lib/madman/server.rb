@@ -9,16 +9,22 @@ module Madman
       set :public_folder, File.expand_path(File.dirname(@@options[:file]))
     end
 
-    def doc(doc_options={})
-      Madman::Document.from_file @@options[:file], doc_options
-    end
-
     get '/' do
-      doc(rtl: @@options[:rtl]).to_html
+      template.render doc.render
     end
 
     get '/github' do
-      doc(rtl: @@options[:rtl], renderer: :github).to_html
+      template.render doc.render(:github)
+    end
+
+    private
+
+    def doc
+      Madman::Document.from_file @@options[:file]
+    end
+
+    def template
+      Madman::Template.new :default, rtl: @@options[:rtl]
     end
   end
 end
