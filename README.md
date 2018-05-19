@@ -38,6 +38,7 @@ Key Features
 - [Planned] Table of Contents generation for a single file.
 - [Planned] Table of Contents generation for a folder of markdown files.
 - [Planned] Combine multiple markdown files to one.
+- [Considered] Web server for an entire folder (like [Madness][1])
 
 
 
@@ -98,15 +99,15 @@ Examples:
 $ madman serve --help
 Run a webserver and serve the markdown file as HTML
 
+This command will start a local server with two endpoints:
+  /         will render the markdown with the default renderer
+  /github   will render with the GitHub API
+
 Usage:
-  madman serve INFILE [--port N --bind ADDRESS --rtl --github]
+  madman serve INFILE [--port N --bind ADDRESS --rtl]
   madman serve (-h|--help|--version)
 
 Options:
-  --github
-    Render using the GitHub API
-    Requires setting the GITHUB_ACCESS_TOKEN environment variable
-
   --rtl
     Render text Right to Left.
 
@@ -126,14 +127,17 @@ Parameters:
 Environment Variables:
   GITHUB_ACCESS_TOKEN
     Your GitHub API access token
+    Required only if you wish to use the '/github' endpoint
     Generate one here: https://github.com/settings/tokens
 
 Examples:
   madman serve README.md
-  madman serve README.md --github
   madman serve README.md -p4000 --rtl
 ```
 
 ---
 
 <!-- usage -->
+
+
+[1]: https://github.com/DannyBen/madness

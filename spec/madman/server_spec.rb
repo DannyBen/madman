@@ -17,4 +17,11 @@ describe Server do
     expect(last_response.content_type).to eq "image/png"
   end
 
+  describe '/github' do
+    it "creates a document with GitHub renderer" do
+      expect(Document).to receive(:from_file).with(anything, hash_including(renderer: :github))
+      get '/github'
+    end    
+  end
+
 end
