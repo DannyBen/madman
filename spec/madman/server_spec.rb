@@ -17,4 +17,11 @@ describe Server do
     expect(last_response.content_type).to eq "image/png"
   end
 
+  describe '/github' do
+    it "creates a document with GitHub renderer" do
+      expect_any_instance_of(Document).to receive(:to_html).and_return('<h1>ok</h1>')
+      get '/github'
+    end    
+  end
+
 end

@@ -9,16 +9,16 @@ module Madman
       set :public_folder, File.expand_path(File.dirname(@@options[:file]))
     end
 
-    def doc
-      doc_options = {
-        rtl: @@options[:rtl],
-        renderer: (@@options[:renderer] || :default)
-      }
+    def doc(doc_options={})
       Madman::Document.from_file @@options[:file], doc_options
     end
 
     get '/' do
-      doc.to_html
+      doc(rtl: @@options[:rtl]).to_html
+    end
+
+    get '/github' do
+      doc(rtl: @@options[:rtl], renderer: :github).to_html
     end
   end
 end
