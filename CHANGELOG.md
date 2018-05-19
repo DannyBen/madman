@@ -1,5 +1,14 @@
 # Change Log
 
+## [Unreleased](https://github.com/DannyBen/madman/tree/HEAD)
+
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Refactor split Document to Template [\#3](https://github.com/DannyBen/madman/pull/3) ([DannyBen](https://github.com/DannyBen))
+- Improvements round [\#2](https://github.com/DannyBen/madman/pull/2) ([DannyBen](https://github.com/DannyBen))
+
 ## [v0.1.0](https://github.com/DannyBen/madman/tree/v0.1.0) (2018-05-19)
 [Full Changelog](https://github.com/DannyBen/madman/compare/v0.0.1...v0.1.0)
 
