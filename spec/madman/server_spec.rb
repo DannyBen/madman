@@ -19,7 +19,7 @@ describe Server do
 
   describe '/github' do
     it "creates a document with GitHub renderer" do
-      expect(Document).to receive(:from_file).with(anything, hash_including(renderer: :github))
+      expect_any_instance_of(Document).to receive(:to_html).and_return('<h1>ok</h1>')
       get '/github'
     end    
   end
