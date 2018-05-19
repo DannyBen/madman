@@ -54,4 +54,9 @@ action :usage do
   say "Saved !txtgrn!README.md"  
 end
 
+help   "Count lines of code"
+action :cloc do
+  run "cloc . --exclude-dir coverage,spec,templates,tmp,dev --exclude-ext yml"
+end
+
 require_relative 'debug.rb' if File.exist? 'debug.rb'
