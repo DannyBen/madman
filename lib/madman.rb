@@ -7,8 +7,12 @@ require 'string-direction'
 
 require 'madman/injector'
 
+require 'madman/directory'
+require 'madman/docdir'
 require 'madman/document'
+require 'madman/item'
 require 'madman/renderers'
+require 'madman/table_of_contents'
 
 require 'madman/server_base'
 require 'madman/preview_server'

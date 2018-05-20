@@ -6,8 +6,7 @@ module Madman
       @dir = dir
     end
 
-    # Returns all markdown file paths, recursively
-    def all
+    def files
       Dir.chdir(dir) { Dir["**/*.md"] }
     end
 

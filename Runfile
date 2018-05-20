@@ -1,5 +1,6 @@
 require "runfile-tasks"
 require "byebug"
+require "lp"
 require_relative 'lib/madman'
 
 title   "Madman Developer Toolbelt"
