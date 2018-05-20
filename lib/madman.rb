@@ -5,7 +5,6 @@ require 'sinatra/reloader'
 require 'slim'
 require 'string-direction'
 
-require 'madman/docdir'
 require 'madman/document'
 require 'madman/renderers'
 

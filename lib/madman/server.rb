@@ -6,15 +6,21 @@ module Madman
       @renderer = settings.respond_to?(:renderer) ? settings.renderer : :default
     end
 
+    get '/favicon.ico' do
+      
+    end
+
     get '/*' do
       path = params[:splat].first
 
       type, file = find_file(path)
       redirect "#{path}/" if type == :dir and path[-1] != '/'
 
-      @doc = Document.from_file file
+      @doc = Document.from_file file 
       slim :template
     end
+
+    private
 
     def find_file(path)
       type = :file
