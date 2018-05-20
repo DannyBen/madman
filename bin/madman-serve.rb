@@ -13,8 +13,8 @@ param "FOLDER", "The folder containing markdown files. If not provided, the curr
 
 environment "GITHUB_ACCESS_TOKEN", "Your GitHub API access token\nRequired only if you wish to use the '/github' endpoint\nGenerate one here: https://github.com/settings/tokens"
 
-example "madman serve README.md"
-example "madman serve README.md -p4000"
+example "madman serve"
+example "madman serve path/to/docs -p4000 --github"
 
 action do |args|
   dir = args['FOLDER'] || '.'

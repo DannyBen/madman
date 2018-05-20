@@ -164,8 +164,8 @@ Environment Variables:
     Generate one here: https://github.com/settings/tokens
 
 Examples:
-  madman serve README.md
-  madman serve README.md -p4000
+  madman serve
+  madman serve path/to/docs -p4000 --github
 ```
 
 ---
