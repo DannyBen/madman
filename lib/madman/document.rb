@@ -1,5 +1,7 @@
 module Madman
   class Document
+    include Injector
+
     attr_reader :filename
     attr_accessor :text
 
@@ -18,6 +20,12 @@ module Madman
 
     def rtl?
       detector.direction(text[0..200]) == 'rtl'
+    end
+
+    def save(save_as=nil)
+      save_as ||= filename
+      raise ArgumentError, "No filename provided" unless save_as
+      File.write save_as, text
     end
 
     private
