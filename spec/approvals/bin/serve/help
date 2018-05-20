@@ -1,17 +1,14 @@
-Run a webserver and serve the markdown file as HTML
+Serve a markdown file using a local server
 
 This command will start a local server with two endpoints:
   /         will render the markdown with the default renderer
   /github   will render with the GitHub API
 
 Usage:
-  madman serve INFILE [--port N --bind ADDRESS --rtl]
-  madman serve (-h|--help|--version)
+  madman preview FILE [--port N --bind ADDRESS]
+  madman preview (-h|--help|--version)
 
 Options:
-  --rtl
-    Render text Right to Left.
-
   -p --port N
     Set server port [default: 3000]
 
@@ -22,7 +19,7 @@ Options:
     Show this help
 
 Parameters:
-  INFILE
+  FILE
     The input markdown file
 
 Environment Variables:
@@ -32,5 +29,5 @@ Environment Variables:
     Generate one here: https://github.com/settings/tokens
 
 Examples:
-  madman serve README.md
-  madman serve README.md -p4000 --rtl
+  madman preview README.md
+  madman preview README.md -p4000

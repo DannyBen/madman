@@ -9,17 +9,26 @@ module Madman
     get '/*' do
       path = params[:splat].first
 
-      file = File.expand_path path, settings.dir
-
-      if File.directory? file
-        redirect "#{path}/" if !path.empty? and path[-1] != '/'
-        file ="#{file}/README.md"
-      else
-        file ="#{file}.md"
-      end      
+      type, file = find_file(path)
+      redirect "#{path}/" if type == :dir and path[-1] != '/'
 
       @doc = Document.from_file file
       slim :template
     end
+
+    def find_file(path)
+      type = :file
+      file = File.expand_path path, settings.dir
+
+      if File.directory? file
+        type = path.empty? ? :root : :dir
+        file ="#{file}/README.md"
+      else
+        file ="#{file}.md"
+      end
+
+      [type, file]
+    end
+
   end
 end
