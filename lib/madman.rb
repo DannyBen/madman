@@ -11,6 +11,7 @@ require 'madman/renderers'
 
 require 'madman/server_base'
 require 'madman/preview_server'
+require 'madman/server'
 
 
 require 'byebug' if ENV['BYEBUG']
