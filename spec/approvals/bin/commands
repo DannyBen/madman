@@ -1,0 +1,4 @@
+Commands:
+  [1;32mpreview  [0mServe a markdown file using a local server
+  [1;32mrender   [0mRender markdown to HTML
+  [1;32mserve    [0mServe a markdown folder using a local server

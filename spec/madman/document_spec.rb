@@ -20,7 +20,23 @@ describe Document do
 
   describe '#render' do
     it 'returns HTML' do
-      expect(subject.render).to match_fixture('document/hello.html')
+      expect(subject.render).to match_fixture('document/render')
+    end
+  end
+
+  describe '#rtl' do
+    context "for an English document" do
+      it "returns false" do
+        expect(subject.rtl?).to be false
+      end
+    end
+
+    context "for a Hebrew document" do
+      let(:filename) { 'spec/fixtures/rtl.md' }
+
+      it "returns true" do
+        expect(subject.rtl?).to be true
+      end
     end
   end
 end

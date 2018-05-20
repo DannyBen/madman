@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Server do
+describe PreviewServer do
   before do 
-    Server.options file: 'spec/fixtures/hello.md'
+    PreviewServer.set file: 'spec/fixtures/hello.md'
   end
 
   it "works" do

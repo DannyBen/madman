@@ -1,7 +1,7 @@
 Render markdown to HTML
 
 Usage:
-  madman render INFILE [OUTFILE] [--rtl --github]
+  madman render FILE [--github --save OUTFILE]
   madman render (-h|--help|--version)
 
 Options:
@@ -9,19 +9,15 @@ Options:
     Render using the GitHub API
     Requires setting the GITHUB_ACCESS_TOKEN environment variable
 
-  --rtl
-    Render text Right to Left
+  --save OUTFILE
+    Save the output to a file
 
   -h --help
     Show this help
 
 Parameters:
-  INFILE
+  FILE
     The input markdown file
-
-  OUTFILE
-    The output HTML file
-    If not provided, the input filename will be used with .html extension
 
 Environment Variables:
   GITHUB_ACCESS_TOKEN
@@ -31,4 +27,4 @@ Environment Variables:
 Examples:
   madman render README.md
   madman render README.md --github
-  madman render README.md out.html --rtl
+  madman render README.md --save out.html

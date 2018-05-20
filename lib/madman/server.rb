@@ -1,30 +1,34 @@
 module Madman
-  class Server < Sinatra::Base
-    @@options = {}
+  class Server < ServerBase
+    set :public_folder, -> { File.expand_path(settings.dir) }
 
-    def self.options(opts)
-      @@options = opts
-      set :bind, @@options[:bind]
-      set :port, @@options[:port]
-      set :public_folder, File.expand_path(File.dirname(@@options[:file]))
+    before do
+      @renderer = settings.renderer
     end
 
-    get '/' do
-      template.render doc.render
+    get '/*' do
+      path = params[:splat].first
+
+      type, file = find_file(path)
+      redirect "#{path}/" if type == :dir and path[-1] != '/'
+
+      @doc = Document.from_file file
+      slim :template
     end
 
-    get '/github' do
-      template.render doc.render(:github)
+    def find_file(path)
+      type = :file
+      file = File.expand_path path, settings.dir
+
+      if File.directory? file
+        type = path.empty? ? :root : :dir
+        file ="#{file}/README.md"
+      else
+        file ="#{file}.md"
+      end
+
+      [type, file]
     end
 
-    private
-
-    def doc
-      Madman::Document.from_file @@options[:file]
-    end
-
-    def template
-      Madman::Template.new :default, rtl: @@options[:rtl]
-    end
   end
 end

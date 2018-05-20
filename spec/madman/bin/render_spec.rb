@@ -5,50 +5,38 @@ describe 'bin/madness-render' do
 
   context "without arguments" do
     it "shows short usage" do
-      expect{ subject.run %w[render]}.to output_fixture('cli/render/usage')
+      expect{ subject.run %w[render]}.to output_fixture('bin/render/usage')
     end
   end
 
   context "with --help" do
     it "shows long usage" do
-      expect{ subject.run %w[render --help] }.to output_fixture('cli/render/help')
+      expect{ subject.run %w[render --help] }.to output_fixture('bin/render/help')
     end
   end
 
   context "with input file" do
     let(:infile) { 'spec/fixtures/hello.md' }
-    let(:outfile) { 'spec/fixtures/hello.md.html' }
     let(:argv) { %W[render #{infile}] }
 
-    before do 
-      File.delete outfile if File.exist? outfile
-      expect(File).not_to exist outfile
-    end
-
-    after do 
-      File.delete outfile if File.exist? outfile
-    end
-
-    it "saves an HTML sibling" do
-      expect{ subject.run argv }.to output_fixture('cli/render/basic')
-      expect(File.read outfile).to match_fixture('hello.html')
+    it "prints HTML to stdout" do
+      expect{ subject.run argv }.to output_fixture('bin/render/basic')
     end
   end
 
-  context "with outfile and --rtl" do
+  context "with input file and --save", :focus do
     let(:infile) { 'spec/fixtures/hello.md' }
     let(:outfile) { 'tmp/out.html' }
-
-    let(:argv) { %W[render #{infile} #{outfile} --rtl] }
+    let(:argv) { %W[render #{infile} --save #{outfile}] }
 
     before do 
       File.delete outfile if File.exist? outfile
       expect(File).not_to exist outfile
     end
 
-    it "shows the HTML with RTL enabled" do
-      expect{ subject.run argv }.to output_fixture('cli/render/outfile-rtl')
-      expect(File.read outfile).to match_fixture('hello-rtl.html')
+    it "saves HTML" do
+      expect{ subject.run argv }.to output_fixture('bin/render/save')
+      expect(File.read outfile).to match_fixture('bin/render/basic')
     end
   end
 end
