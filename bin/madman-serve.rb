@@ -1,22 +1,19 @@
 require 'madman'
 
-summary "Run a webserver and serve the markdown file as HTML"
+summary "Serve a markdown folder using a local server"
 
-help "This command will start a local server with two endpoints:\n  /         will render the markdown with the default renderer\n  /github   will render with the GitHub API"
-
-usage "madman serve INFILE [--port N --bind ADDRESS --rtl]"
+usage "madman serve FOLDER [--port N --bind ADDRESS]"
 usage "madman serve (-h|--help|--version)"
 
-option "--rtl", "Render text Right to Left."
 option "-p --port N", "Set server port [default: 3000]"
 option "-b --bind ADDRESS", "Set server listen address [default: 0.0.0.0]"
 
-param "INFILE", "The input markdown file"
+param "FOLDER", "The folder containing markdown files"
 
 environment "GITHUB_ACCESS_TOKEN", "Your GitHub API access token\nRequired only if you wish to use the '/github' endpoint\nGenerate one here: https://github.com/settings/tokens"
 
 example "madman serve README.md"
-example "madman serve README.md -p4000 --rtl"
+example "madman serve README.md -p4000"
 
 action do |args|
   opts = { 

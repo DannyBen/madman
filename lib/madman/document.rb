@@ -1,6 +1,7 @@
 module Madman
   class Document
-    attr_reader :text, :filename
+    attr_reader :filename
+    attr_accessor :text
 
     def self.from_file(file)
       new File.read(file), file
@@ -15,7 +16,15 @@ module Madman
       renderers[renderer].render text
     end
 
+    def rtl?
+      detector.direction(text[0..200]) == 'rtl'
+    end
+
     private
+
+    def detector
+      @detector ||= StringDirection::Detector.new :dominant
+    end
 
     def renderers
       Renderers.available_renderers
