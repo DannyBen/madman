@@ -34,7 +34,12 @@ end
 help   "Inject usage to README"
 action :usage do
   template = File.read 'README.md'
-  commands = ["madman", "madman render --help", "madman serve --help"]
+  commands = [
+    "madman", 
+    "madman render --help", 
+    "madman preview --help", 
+    "madman serve --help"
+  ]
   marker = '<!-- usage -->'
 
   usage = [marker]
