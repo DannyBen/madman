@@ -155,7 +155,7 @@ Options:
 Parameters:
   FOLDER
     The folder containing markdown files. If not provided, the current directory
-    will be used.
+    will be used
 
 Environment Variables:
   GITHUB_ACCESS_TOKEN
