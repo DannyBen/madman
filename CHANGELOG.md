@@ -1,11 +1,12 @@
 # Change Log
 
-## [Unreleased](https://github.com/DannyBen/madman/tree/HEAD)
-
-[Full Changelog](https://github.com/DannyBen/madman/compare/v0.1.0...HEAD)
+## [v0.1.2](https://github.com/DannyBen/madman/tree/v0.1.2) (2018-05-21)
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.1.0...v0.1.2)
 
 **Merged pull requests:**
 
+- Add site navigation generator [\#5](https://github.com/DannyBen/madman/pull/5) ([DannyBen](https://github.com/DannyBen))
+- Server refactor [\#4](https://github.com/DannyBen/madman/pull/4) ([DannyBen](https://github.com/DannyBen))
 - Refactor split Document to Template [\#3](https://github.com/DannyBen/madman/pull/3) ([DannyBen](https://github.com/DannyBen))
 - Improvements round [\#2](https://github.com/DannyBen/madman/pull/2) ([DannyBen](https://github.com/DannyBen))
 
