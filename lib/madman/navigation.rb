@@ -1,6 +1,6 @@
 module Madman
   # Generate a markdown Table of Contents
-  class TableOfContents
+  class Navigation
     attr_reader :dir, :depth
 
     def initialize(dir='.', depth: 10)

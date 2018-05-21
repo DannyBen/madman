@@ -12,7 +12,7 @@ require 'madman/docdir'
 require 'madman/document'
 require 'madman/item'
 require 'madman/renderers'
-require 'madman/table_of_contents'
+require 'madman/navigation'
 
 require 'madman/server_base'
 require 'madman/preview_server'
