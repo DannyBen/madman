@@ -2,7 +2,7 @@ Render markdown to HTML
 
 Usage:
   madman render FILE [--github --save OUTFILE]
-  madman render (-h|--help|--version)
+  madman render (-h|--help)
 
 Options:
   --github

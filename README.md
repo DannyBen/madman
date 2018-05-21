@@ -66,7 +66,7 @@ Commands:
 $ madman render
 Usage:
   madman render FILE [--github --save OUTFILE]
-  madman render (-h|--help|--version)
+  madman render (-h|--help)
 ```
 
 <!-- render -->
@@ -80,7 +80,7 @@ Render markdown to HTML
 
 Usage:
   madman render FILE [--github --save OUTFILE]
-  madman render (-h|--help|--version)
+  madman render (-h|--help)
 
 Options:
   --github
@@ -119,7 +119,7 @@ Examples:
 $ madman preview
 Usage:
   madman preview FILE [--port N --bind ADDRESS]
-  madman preview (-h|--help|--version)
+  madman preview (-h|--help)
 ```
 
 <!-- preview -->
@@ -136,7 +136,7 @@ This command will start a local server with two endpoints:
 
 Usage:
   madman preview FILE [--port N --bind ADDRESS]
-  madman preview (-h|--help|--version)
+  madman preview (-h|--help)
 
 Options:
   -p --port N
@@ -174,7 +174,7 @@ Examples:
 $ madman serve
 Usage:
   madman serve FOLDER [--port N --bind ADDRESS --github]
-  madman serve (-h|--help|--version)
+  madman serve (-h|--help)
 ```
 
 <!-- serve -->
@@ -187,7 +187,7 @@ Serve a markdown folder using a local server
 
 Usage:
   madman serve FOLDER [--port N --bind ADDRESS --github]
-  madman serve (-h|--help|--version)
+  madman serve (-h|--help)
 
 Options:
   --github
@@ -228,7 +228,7 @@ Examples:
 $ madman nav
 Usage:
   madman nav FOLDER [--marker TEXT --force --dry --verbose --depth N]
-  madman nav (-h|--help|--version)
+  madman nav (-h|--help)
 ```
 
 <!-- nav -->
@@ -245,7 +245,7 @@ folder as each README file.
 
 Usage:
   madman nav FOLDER [--marker TEXT --force --dry --verbose --depth N]
-  madman nav (-h|--help|--version)
+  madman nav (-h|--help)
 
 Options:
   -f --force

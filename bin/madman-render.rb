@@ -3,7 +3,7 @@ require 'madman'
 help "Render markdown to HTML"
 
 usage "madman render FILE [--github --save OUTFILE]"
-usage "madman render (-h|--help|--version)"
+usage "madman render (-h|--help)"
 
 option "--github", "Render using the GitHub API\nRequires setting the GITHUB_ACCESS_TOKEN environment variable"
 option "--save OUTFILE", "Save the output to a file"

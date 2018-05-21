@@ -6,7 +6,7 @@ This command will start a local server with two endpoints:
 
 Usage:
   madman preview FILE [--port N --bind ADDRESS]
-  madman preview (-h|--help|--version)
+  madman preview (-h|--help)
 
 Options:
   -p --port N

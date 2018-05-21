@@ -5,7 +5,7 @@ summary "Add site-wide navigation links to README files"
 help "This command will add a table of contents to all README files in the folder. The table of contents will link to all the pages and folders that are in the same folder as each README file."
 
 usage "madman nav FOLDER [--marker TEXT --force --dry --verbose --depth N]"
-usage "madman nav (-h|--help|--version)"
+usage "madman nav (-h|--help)"
 
 option "-f --force", "Add to all README files, even if they do not have a marker"
 option "-m --marker TEXT", "Look for an HTML comment with <!-- TEXT --> [default: nav]"

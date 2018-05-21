@@ -3,7 +3,7 @@ require 'madman'
 summary "Serve a markdown folder using a local server"
 
 usage "madman serve FOLDER [--port N --bind ADDRESS --github]"
-usage "madman serve (-h|--help|--version)"
+usage "madman serve (-h|--help)"
 
 option "--github", "Use the GitHub API renderer instead of the default one"
 option "-p --port N", "Set server port [default: 3000]"

@@ -1,3 +1,3 @@
 Usage:
   madman render FILE [--github --save OUTFILE]
-  madman render (-h|--help|--version)
+  madman render (-h|--help)

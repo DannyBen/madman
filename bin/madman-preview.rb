@@ -5,7 +5,7 @@ summary "Serve a markdown file using a local server"
 help "This command will start a local server with two endpoints:\n  /         will render the markdown with the default renderer\n  /github   will render with the GitHub API"
 
 usage "madman preview FILE [--port N --bind ADDRESS]"
-usage "madman preview (-h|--help|--version)"
+usage "madman preview (-h|--help)"
 
 option "-p --port N", "Set server port [default: 3000]"
 option "-b --bind ADDRESS", "Set server listen address [default: 0.0.0.0]"
