@@ -7,7 +7,7 @@ module Madman
       content = [marker, content, marker].join "\n"
 
       if found_markers == 0 and force
-        self.text += "\n#{content}"
+        self.text += "\n\n#{content}"
       elsif found_markers == 1
         text.gsub! /#{marker}/im, content
       elsif found_markers == 2

@@ -1,5 +1,6 @@
 require "runfile-tasks"
 require "byebug"
+require "lp"
 require_relative 'lib/madman'
 
 title   "Madman Developer Toolbelt"
@@ -9,6 +10,18 @@ version Madman::VERSION
 RunfileTasks::RubyGems.all 'madman'
 RunfileTasks::Testing.rspec
 RunfileTasks::Docs.rdoc
+
+usage_commands = {
+  'usage'        => 'madman',
+  'render'       => 'madman render',
+  'render-help'  => 'madman render --help',
+  'preview'      => 'madman preview',
+  'preview-help' => 'madman preview --help',
+  'serve'        => 'madman serve',
+  'serve-help'   => 'madman serve --help',
+  'nav'          => 'madman nav',
+  'nav-help'     => 'madman nav --help',
+}
 
 help   "Run YARD server"
 action :yard do
@@ -33,30 +46,13 @@ end
 
 help   "Inject usage to README"
 action :usage do
-  template = File.read 'README.md'
-  commands = [
-    "madman", 
-    "madman render --help", 
-    "madman preview --help", 
-    "madman serve --help"
-  ]
-  marker = '<!-- usage -->'
+  doc = Madman::Document.from_file 'README.md'
 
-  usage = [marker]
-  commands.each do |command|
-    say "Running #{command}..."
-    usage << "```"
-    usage << "$ #{command}"
-    usage << `#{command}`.chomp
-    usage << "```"
-    usage << "\n---\n"
+  usage_commands.each do |marker, command|
+    doc.inject command_output(command), marker: marker
   end
-  usage << marker
 
-  usage = usage.join "\n"
-  readme = template.gsub /#{marker}.*#{marker}/im, usage
-  File.write 'README.md', readme
-  say "Saved !txtgrn!README.md"  
+  doc.save
 end
 
 help   "Count lines of code"
@@ -64,4 +60,10 @@ action :cloc do
   run "cloc . --exclude-dir coverage,spec,templates,tmp,dev --exclude-ext yml"
 end
 
+def command_output(command)
+  say "Executing !txtgrn!#{command}"
+  "\n```\n" + "$ #{command}\n" + `#{command}`.chomp + "\n```\n"
+end
+
 require_relative 'debug.rb' if File.exist? 'debug.rb'
+

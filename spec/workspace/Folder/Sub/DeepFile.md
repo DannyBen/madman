@@ -1,7 +1,7 @@
-# All done
+# Another Deep File
 
 <!-- nav -->
-1. [DeepFile](DeepFile)
+
 <!-- nav -->
 
 You should see **three different images below**:
