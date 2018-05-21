@@ -31,14 +31,15 @@ gem 'madman', require: false
 Key Features
 --------------------------------------------------
 
-- [x] GitHub-style markdown generation.
-- [x] Convert markdown to a single HTML file (including CSS).
+- [x] GitHub-style markdown generation (markup and stylesheet).
+- [x] Convert markdown to HTML file.
 - [x] Ad-hoc server to serve a markdown file locally for preview.
 - [x] Markdown generation with GitHub API (optional).
 - [x] Table of Contents generation for a folder of markdown files.
-- [x] Web server for an entire folder (like [Madness](https://github.com/DannyBen/madness))
-- [ ] [Planned] Generate breadcrumbs
-- [ ] [Planned] Generate navigation README in folders without one
+- [x] Web server for an entire folder (like [Madness][1]) with GitHub Pages 
+      compatibility.
+- [ ] [Planned] Generate breadcrumbs.
+- [ ] [Planned] Generate navigation README in folders without one.
 - [ ] [Planned] Combine multiple markdown files to one.
 - [ ] [Considered] Table of Contents generation for a single file.
 
@@ -279,3 +280,6 @@ Examples:
 ```
 
 <!-- nav-help --></details>
+
+
+[1]: https://github.com/DannyBen/madness
