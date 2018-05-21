@@ -1,0 +1,16 @@
+---
+- :level: 0
+  :item: !ruby/object:Madman::Item
+    path: spec/workspace/Folder
+    type: :dir
+    basedir: spec/workspace
+- :level: 1
+  :item: !ruby/object:Madman::Item
+    path: spec/workspace/Folder/Sub
+    type: :dir
+    basedir: spec/workspace
+- :level: 1
+  :item: !ruby/object:Madman::Item
+    path: spec/workspace/Folder/File.md
+    type: :file
+    basedir: spec/workspace

@@ -1,0 +1,5 @@
+header <!-- mark -->replacable<!-- mark --> footer
+
+<!-- no-such-mark -->
+new content
+<!-- no-such-mark -->

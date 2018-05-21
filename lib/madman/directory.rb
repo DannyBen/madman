@@ -3,9 +3,9 @@ module Madman
   class Directory
     attr_reader :dir, :basedir
 
-    def initialize(dir, basedir)
+    def initialize(dir, basedir=nil)
       @dir = dir
-      @basedir = basedir
+      @basedir = basedir || dir
     end
     
     def list

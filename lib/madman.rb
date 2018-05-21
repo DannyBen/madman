@@ -8,7 +8,6 @@ require 'string-direction'
 require 'madman/injector'
 
 require 'madman/directory'
-require 'madman/docdir'
 require 'madman/document'
 require 'madman/item'
 require 'madman/renderers'

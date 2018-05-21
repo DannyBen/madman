@@ -39,4 +39,46 @@ describe Document do
       end
     end
   end
+
+  describe '#save' do
+    let(:subject_file) { 'tmp/save_target.md' }
+
+    subject { described_class.from_file subject_file }
+
+    before do
+      system "cp spec/fixtures/hello.md #{subject_file}"
+    end
+
+    context "without arguments" do
+      context "when filename is known" do
+        it "saves the file" do
+          subject.text = "new text"
+          subject.save
+          expect(File.read subject_file).to eq "new text"
+        end
+      end
+
+      context "when filename is unknown" do
+        subject { described_class.new "# some markdown without filename" }
+
+        it "raises ArgumentError" do
+          expect{ subject.save }.to raise_error(ArgumentError, "No filename provided")          
+        end
+      end      
+    end
+
+    context "with a save_as argument" do
+      let(:target_file) { 'tmp/save_as_target.md' }
+
+      before do
+        system "rm #{target_file}" if File.exist? target_file
+      end
+
+      it "saves" do
+        subject.save target_file
+        expect(File.read target_file).to eq File.read subject_file
+      end
+    end
+  end
 end
+ 
