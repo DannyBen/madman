@@ -9,7 +9,7 @@ Madman
 
 ---
 
-The Markdown Swiss Armi Knife
+The Markdown Swiss Army Knife
 
 ---
 

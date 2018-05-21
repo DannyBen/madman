@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name        = 'madman'
   s.version     = Madman::VERSION
   s.date        = Date.today.to_s
-  s.summary     = "The Markdown Swiss Armi Knife"
+  s.summary     = "The Markdown Swiss Army Knife"
   s.description = "A command line utility for markdown fun"
   s.authors     = ["Danny Ben Shitrit"]
   s.email       = 'db@dannyben.com'
