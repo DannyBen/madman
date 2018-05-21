@@ -28,7 +28,7 @@ gem 'madman', require: false
 
 
 
-Key Features
+Features
 --------------------------------------------------
 
 - [x] GitHub-style markdown generation (markup and stylesheet).
@@ -38,6 +38,7 @@ Key Features
 - [x] Table of Contents generation for a folder of markdown files.
 - [x] Web server for an entire folder (like [Madness][1]) with GitHub Pages 
       compatibility.
+- [x] Automatic detection of Right-to-Left markdown files for HTML rendering.
 - [ ] [Planned] Generate breadcrumbs.
 - [ ] [Planned] Generate navigation README in folders without one.
 - [ ] [Planned] Combine multiple markdown files to one.
