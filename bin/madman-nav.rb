@@ -4,7 +4,7 @@ summary "Add site-wide navigation links to README files"
 
 help "This command will add a table of contents to all README files in the folder. The table of contents will link to all the pages and folders that are in the same folder as each README file."
 
-usage "madman nav [FOLDER] [--marker TEXT --force --dry --verbose --depth N]"
+usage "madman nav FOLDER [--marker TEXT --force --dry --verbose --depth N]"
 usage "madman nav (-h|--help|--version)"
 
 option "-f --force", "Add to all README files, even if they do not have a marker"
@@ -13,7 +13,7 @@ option "-d --depth N", "The depth of the table of contents [default: 1]"
 option "--dry", "Do not save the updated files, just show what will happen"
 option "-v --verbose", "Show the updated README content"
 
-param "FOLDER", "The folder containing markdown files. If not provided, the current directory will be used"
+param "FOLDER", "The folder containing markdown files"
 
 example "madman nav"
 example "madman nav path/to/docs --force --marker toc"
