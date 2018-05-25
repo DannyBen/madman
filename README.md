@@ -56,7 +56,7 @@ $ madman
 Commands:
   nav      Add site-wide navigation links to README files
   preview  Serve a markdown file using a local server
-  readme   Create README.md in all qualified sub directories, and insert H1 wit
+  readme   Create README in all qualified sub directories
   render   Render markdown to HTML
   serve    Serve a markdown directory using a local server
 ```
@@ -304,8 +304,11 @@ Usage:
 
 ```
 $ madman readme --help
-Create README.md in all qualified sub directories, and insert H1 with the name
-of the directory
+Create README in all qualified sub directories
+
+This command generates README.md files in all subdirectories. Each file will
+receive an H1 caption with the name of the folder it resides in. This command is
+designed to assist in preparing a folder for table of contents injection.
 
 Usage:
   madman readme DIR [--dry]

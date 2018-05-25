@@ -1,7 +1,9 @@
 require 'madman'
 require 'lp'
 
-summary "Create README.md in all qualified sub directories, and insert H1 with the name of the directory"
+summary "Create README in all qualified sub directories"
+
+help "This command generates README.md files in all subdirectories. Each file will receive an H1 caption with the name of the folder it resides in. This command is designed to assist in preparing a folder for table of contents injection."
 
 usage "madman readme DIR [--dry]"
 usage "madman readme (-h|--help)"
