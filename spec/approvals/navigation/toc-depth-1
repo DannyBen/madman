@@ -14,3 +14,13 @@
     path: spec/workspace/Folder/File.md
     type: :file
     basedir: spec/workspace
+- :level: 0
+  :item: !ruby/object:Madman::Item
+    path: spec/workspace/FolderWithoutReadme
+    type: :dir
+    basedir: spec/workspace
+- :level: 1
+  :item: !ruby/object:Madman::Item
+    path: spec/workspace/FolderWithoutReadme/File.md
+    type: :file
+    basedir: spec/workspace

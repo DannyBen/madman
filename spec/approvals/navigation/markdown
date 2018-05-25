@@ -2,3 +2,5 @@
     1. [Sub](Folder/Sub)
         1. [DeepFile](Folder/Sub/DeepFile)
     1. [File](Folder/File)
+1. [FolderWithoutReadme](FolderWithoutReadme)
+    1. [File](FolderWithoutReadme/File)

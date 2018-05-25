@@ -1,13 +1,14 @@
-Serve a markdown directory using a local server
+Serve a markdown file using a local server
+
+This command will start a local server with two endpoints:
+  /         will render the markdown with the default renderer
+  /github   will render with the GitHub API
 
 Usage:
-  madman serve DIR [--port N --bind ADDRESS --github]
-  madman serve (-h|--help)
+  madman preview FILE [--port N --bind ADDRESS]
+  madman preview (-h|--help)
 
 Options:
-  --github
-    Use the GitHub API renderer instead of the default one
-
   -p --port N
     Set server port [default: 3000]
 
@@ -18,8 +19,8 @@ Options:
     Show this help
 
 Parameters:
-  DIR
-    The directory containing markdown files
+  FILE
+    The input markdown file
 
 Environment Variables:
   GITHUB_ACCESS_TOKEN
@@ -28,5 +29,5 @@ Environment Variables:
     Generate one here: https://github.com/settings/tokens
 
 Examples:
-  madman serve
-  madman serve path/to/docs -p4000 --github
+  madman preview README.md
+  madman preview README.md -p4000

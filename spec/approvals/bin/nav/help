@@ -1,0 +1,44 @@
+Add site-wide navigation links to README files
+
+This command generates a Table of Contents for a directory, and injects it to a
+file. In addition, it supports recursive execution, which will add a Table of
+Contents to all README files (or a filename of your choice) in all the
+subfolders, creating nagigation pages for an entire Markdown site.
+
+Usage:
+  madman nav DIR [options]
+  madman nav (-h|--help)
+
+Options:
+  -f --force
+    Inject TOC to all README files, even if they do not have a marker
+
+  -m --marker TEXT
+    Look for an HTML comment with <!-- TEXT --> [default: nav]
+
+  -d --depth N
+    The depth of the table of contents [default: 1]
+
+  -v --verbose
+    Show the updated README content
+
+  -t --target NAME
+    Set the target filename to look for. [default: README.md]
+
+  -r --recursive
+    Inject to all target files
+
+  -y --dry
+    Do not save the updated files, just show what will happen
+
+  -h --help
+    Show this help
+
+Parameters:
+  DIR
+    The directory containing markdown files
+
+Examples:
+  madman nav
+  madman nav path/to/docs --force --marker toc
+  madman nav path/to/docs --dry -v -d2

@@ -39,8 +39,8 @@ Features
 - [x] Web server for an entire folder (like [Madness][1]) with GitHub Pages 
       compatibility.
 - [x] Automatic detection of Right-to-Left markdown files for HTML rendering.
+- [x] Generate navigation README in folders without one.
 - [ ] [Planned] Generate breadcrumbs.
-- [ ] [Planned] Generate navigation README in folders without one.
 - [ ] [Planned] Combine multiple markdown files to one.
 - [ ] [Considered] Table of Contents generation for a single file.
 
@@ -56,8 +56,9 @@ $ madman
 Commands:
   nav      Add site-wide navigation links to README files
   preview  Serve a markdown file using a local server
+  readme   Create README.md in all qualified sub directories, and insert H1 wit
   render   Render markdown to HTML
-  serve    Serve a markdown folder using a local server
+  serve    Serve a markdown directory using a local server
 ```
 
 <!-- usage -->
@@ -177,7 +178,7 @@ Examples:
 ```
 $ madman serve
 Usage:
-  madman serve FOLDER [--port N --bind ADDRESS --github]
+  madman serve DIR [--port N --bind ADDRESS --github]
   madman serve (-h|--help)
 ```
 
@@ -187,10 +188,10 @@ Usage:
 
 ```
 $ madman serve --help
-Serve a markdown folder using a local server
+Serve a markdown directory using a local server
 
 Usage:
-  madman serve FOLDER [--port N --bind ADDRESS --github]
+  madman serve DIR [--port N --bind ADDRESS --github]
   madman serve (-h|--help)
 
 Options:
@@ -207,8 +208,8 @@ Options:
     Show this help
 
 Parameters:
-  FOLDER
-    The folder containing markdown files
+  DIR
+    The directory containing markdown files
 
 Environment Variables:
   GITHUB_ACCESS_TOKEN
@@ -231,7 +232,7 @@ Examples:
 ```
 $ madman nav
 Usage:
-  madman nav FOLDER [--marker TEXT --force --dry --verbose --depth N]
+  madman nav DIR [options]
   madman nav (-h|--help)
 ```
 
@@ -243,17 +244,18 @@ Usage:
 $ madman nav --help
 Add site-wide navigation links to README files
 
-This command will add a table of contents to all README files in the folder. The
-table of contents will link to all the pages and folders that are in the same
-folder as each README file.
+This command generates a Table of Contents for a directory, and injects it to a
+file. In addition, it supports recursive execution, which will add a Table of
+Contents to all README files (or a filename of your choice) in all the
+subfolders, creating nagigation pages for an entire Markdown site.
 
 Usage:
-  madman nav FOLDER [--marker TEXT --force --dry --verbose --depth N]
+  madman nav DIR [options]
   madman nav (-h|--help)
 
 Options:
   -f --force
-    Add to all README files, even if they do not have a marker
+    Inject TOC to all README files, even if they do not have a marker
 
   -m --marker TEXT
     Look for an HTML comment with <!-- TEXT --> [default: nav]
@@ -261,18 +263,24 @@ Options:
   -d --depth N
     The depth of the table of contents [default: 1]
 
-  --dry
-    Do not save the updated files, just show what will happen
-
   -v --verbose
     Show the updated README content
+
+  -t --target NAME
+    Set the target filename to look for. [default: README.md]
+
+  -r --recursive
+    Inject to all target files
+
+  -y --dry
+    Do not save the updated files, just show what will happen
 
   -h --help
     Show this help
 
 Parameters:
-  FOLDER
-    The folder containing markdown files
+  DIR
+    The directory containing markdown files
 
 Examples:
   madman nav
@@ -281,6 +289,45 @@ Examples:
 ```
 
 <!-- nav-help --></details>
+
+<!-- readme -->
+
+```
+$ madman readme
+Usage:
+  madman readme DIR [--dry]
+  madman readme (-h|--help)
+```
+
+<!-- readme -->
+<!-- readme-help -->
+
+```
+$ madman readme --help
+Create README.md in all qualified sub directories, and insert H1 with the name
+of the directory
+
+Usage:
+  madman readme DIR [--dry]
+  madman readme (-h|--help)
+
+Options:
+  -y --dry
+    Only show what will be created, don't make any changes
+
+  -h --help
+    Show this help
+
+Parameters:
+  DIR
+    The directory containing markdown files
+
+Examples:
+  madman readme .
+  madman readme path/to/docs --dry
+```
+
+<!-- readme-help -->
 
 
 [1]: https://github.com/DannyBen/madness

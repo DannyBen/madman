@@ -49,7 +49,6 @@ def update_file(file)
   doc.save unless dry?
 end
 
-
 # CLI Arguments
 
 def args;         @args; end
