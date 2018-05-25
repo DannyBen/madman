@@ -21,6 +21,8 @@ usage_commands = {
   'serve-help'   => 'madman serve --help',
   'nav'          => 'madman nav',
   'nav-help'     => 'madman nav --help',
+  'readme'       => 'madman readme',
+  'readme-help'  => 'madman readme --help',
 }
 
 help   "Run YARD server"

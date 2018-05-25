@@ -12,6 +12,14 @@ module Madman
       @list ||= (dirs + files)
     end
 
+    def deep_list
+      result = list
+      dirs.each do |dir|
+        result += Directory.new(dir.path, basedir).deep_list
+      end
+      result
+    end
+
     private
 
     def files

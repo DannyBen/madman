@@ -1,0 +1,21 @@
+Create README.md in all qualified sub directories, and insert H1 with the name
+of the directory
+
+Usage:
+  madman readme DIR [--dry]
+  madman readme (-h|--help)
+
+Options:
+  -y --dry
+    Only show what will be created, don't make any changes
+
+  -h --help
+    Show this help
+
+Parameters:
+  DIR
+    The directory containing markdown files
+
+Examples:
+  madman readme .
+  madman readme path/to/docs --dry
