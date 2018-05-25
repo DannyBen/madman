@@ -290,6 +290,9 @@ Examples:
 
 <!-- nav-help --></details>
 
+
+### Generate README files with H1
+
 <!-- readme -->
 
 ```
@@ -300,7 +303,8 @@ Usage:
 ```
 
 <!-- readme -->
-<!-- readme-help -->
+
+<details><summary>Show full usage</summary><!-- readme-help -->
 
 ```
 $ madman readme --help
@@ -330,7 +334,7 @@ Examples:
   madman readme path/to/docs --dry
 ```
 
-<!-- readme-help -->
+<!-- readme-help --></details>
 
 
 [1]: https://github.com/DannyBen/madness
