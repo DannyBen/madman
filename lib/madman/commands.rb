@@ -1,0 +1,5 @@
+require 'madman/commands/nav'
+require 'madman/commands/preview'
+require 'madman/commands/readme'
+require 'madman/commands/render'
+require 'madman/commands/serve'

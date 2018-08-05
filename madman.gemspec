@@ -12,13 +12,13 @@ Gem::Specification.new do |s|
   s.authors     = ["Danny Ben Shitrit"]
   s.email       = 'db@dannyben.com'
   s.files       = Dir['README.md', 'lib/**/*.*']
-  s.executables = Dir['bin/madman*'].map { |f| File.basename f }
+  s.executables = ['madman']
   s.homepage    = 'https://github.com/dannyben/madman'
   s.license     = 'MIT'
   s.required_ruby_version = ">= 2.4.0"
 
   s.add_runtime_dependency 'commonmarker', '~> 0.17'
-  s.add_runtime_dependency 'mister_bin', '~> 0.2'
+  s.add_runtime_dependency 'mister_bin', '~> 0.3'
   s.add_runtime_dependency 'puma', '~> 3.11'
   s.add_runtime_dependency 'sinatra', '~> 2.0'
   s.add_runtime_dependency 'sinatra-contrib', '~> 2.0'
@@ -26,7 +26,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'string-direction', '~> 1.2'
 
   s.add_development_dependency 'byebug', '~> 10.0'
-  s.add_development_dependency 'github_changelog_generator', '~> 1.14'
   s.add_development_dependency 'lp', '~> 0.0'
   s.add_development_dependency 'octokit', '~> 4.9'
   s.add_development_dependency 'rack-test', '~> 1.0'

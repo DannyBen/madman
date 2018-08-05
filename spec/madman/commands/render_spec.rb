@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'bin/madness-render' do
-  subject { MisterBin::Runner.new 'madman', basedir: 'bin' }
+  subject { Madman::CLI.runner }
 
   context "without arguments" do
     it "shows short usage" do

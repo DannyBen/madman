@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
-require 'mister_bin'
-require 'madman/version'
+require 'madman'
+require 'madman/cli'
 
-runner = MisterBin::Runner.new 'madman', basedir: __dir__,
-  version: Madman::VERSION
+runner = Madman::CLI.runner
 
 begin
   exit runner.run ARGV
