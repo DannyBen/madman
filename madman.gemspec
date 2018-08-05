@@ -26,7 +26,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'string-direction', '~> 1.2'
 
   s.add_development_dependency 'byebug', '~> 10.0'
-  s.add_development_dependency 'github_changelog_generator', '~> 1.14'
   s.add_development_dependency 'lp', '~> 0.0'
   s.add_development_dependency 'octokit', '~> 4.9'
   s.add_development_dependency 'rack-test', '~> 1.0'

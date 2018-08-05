@@ -1,26 +1,26 @@
 require 'spec_helper'
 
-describe 'bin/madness-serve' do
-  subject { MisterBin::Runner.new 'madman', basedir: 'bin' }
+describe 'bin/madness-preview' do
+  subject { Madman::CLI.runner }
 
   context "without arguments" do
     it "shows short usage" do
-      expect{ subject.run %w[serve]}.to output_fixture('bin/serve/usage')
+      expect{ subject.run %w[preview]}.to output_fixture('bin/preview/usage')
     end
   end
 
   context "with --help" do
     it "shows long usage" do
-      expect{ subject.run %w[serve --help] }.to output_fixture('bin/serve/help')
+      expect{ subject.run %w[preview --help] }.to output_fixture('bin/preview/help')
     end
   end
 
   context "with required arguments" do
     let(:infile) { 'spec/fixtures/hello.md' }
-    let(:argv) { %W[serve .] }
+    let(:argv) { %W[preview #{infile}] }
 
     it "calls the server" do
-      expect(Server).to receive(:run!)
+      expect(PreviewServer).to receive(:run!)
       expect{ subject.run argv }.to output(/Starting server/).to_stdout
     end
   end

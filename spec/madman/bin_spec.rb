@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'bin/madman' do
-  subject { MisterBin::Runner.new 'madman', basedir: 'bin' }
+  subject { Madman::CLI.runner }
 
   it "shows list of commands" do
     expect{ subject.run }.to output_fixture('bin/commands')
