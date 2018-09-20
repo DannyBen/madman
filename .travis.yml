@@ -5,17 +5,14 @@ env:
   - CC_TEST_REPORTER_ID=bd484118b73fc52c1b1d16ea38bd861623b43ad1113efd63df0b93ca6b7a569f
 
 rvm:
-  - "2.4.0"
-  - "2.5.0"
-
-branches:
-  only: [master]
+- "2.4.0"
+- "2.5.0"
 
 notifications:
   email: false
 
 before_install:
-  - gem install bundler
+- gem install bundler
 
 before_script:
 - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter

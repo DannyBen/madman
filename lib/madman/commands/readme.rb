@@ -1,5 +1,3 @@
-require 'lp'
-
 module Madman
   module Commands
     class Readme < MisterBin::Command
