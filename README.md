@@ -34,15 +34,16 @@ Features
 - [x] GitHub-style markdown generation (markup and stylesheet).
 - [x] Convert markdown to HTML file.
 - [x] Ad-hoc server to serve a markdown file locally for preview.
+- [ ] Ad-hoc server to allow editing of a markdown file locally.
 - [x] Markdown generation with GitHub API (optional).
 - [x] Table of Contents generation for a folder of markdown files.
 - [x] Web server for an entire folder (like [Madness][1]) with GitHub Pages 
       compatibility.
 - [x] Automatic detection of Right-to-Left markdown files for HTML rendering.
 - [x] Generate navigation README in folders without one.
-- [ ] [Planned] Generate breadcrumbs.
-- [ ] [Planned] Combine multiple markdown files to one.
-- [ ] [Considered] Table of Contents generation for a single file.
+- [ ] Generate breadcrumbs.
+- [ ] Combine multiple markdown files to one.
+- [ ] Table of Contents generation for a single file.
 
 
 
