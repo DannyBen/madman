@@ -34,7 +34,7 @@ Features
 - [x] GitHub-style markdown generation (markup and stylesheet).
 - [x] Convert markdown to HTML file.
 - [x] Ad-hoc server to serve a markdown file locally for preview.
-- [ ] Ad-hoc server to allow editing of a markdown file locally.
+- [ ] Ad-hoc server to allow editing of a local markdown file.
 - [x] Markdown generation with GitHub API (optional).
 - [x] Table of Contents generation for a folder of markdown files.
 - [x] Web server for an entire folder (like [Madness][1]) with GitHub Pages 
