@@ -17,10 +17,12 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.required_ruby_version = ">= 2.4.0"
 
+  # we are locking sinatra to 2.0.3 due to this issue:
+  # https://github.com/sinatra/sinatra/issues/1476
+  s.add_runtime_dependency 'sinatra', '2.0.3'
   s.add_runtime_dependency 'commonmarker', '~> 0.17'
   s.add_runtime_dependency 'mister_bin', '~> 0.3'
   s.add_runtime_dependency 'puma', '~> 3.11'
-  s.add_runtime_dependency 'sinatra', '~> 2.0'
   s.add_runtime_dependency 'sinatra-contrib', '~> 2.0'
   s.add_runtime_dependency 'slim', '~> 3.0'
   s.add_runtime_dependency 'string-direction', '~> 1.2'

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'bin/madness-nav' do
+describe 'bin/madman nav' do
   subject { Madman::CLI.runner }
 
   context "without arguments" do

@@ -27,10 +27,10 @@ module Madman
 
         say "Starting server at !undblu!localhost:#{port}!txtrst! using the !txtgrn!#{renderer}!txtrst! renderer\n"
 
-        Madman::Server.set bind: bind, port: port, 
+        Madman::DirServer.set bind: bind, port: port, 
           dir: dir, renderer: renderer
           
-        Madman::Server.run!
+        Madman::DirServer.run!
       end
 
     end

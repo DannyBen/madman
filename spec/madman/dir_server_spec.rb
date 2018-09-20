@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Server do
+describe DirServer do
   before do 
-    Server.set dir: 'spec/workspace'
+    described_class.set dir: 'spec/workspace'
   end
 
   it "works" do

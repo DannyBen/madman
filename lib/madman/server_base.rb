@@ -8,5 +8,9 @@ module Madman
       register Sinatra::Reloader
       also_reload "#{__dir__}/*.rb"
     end
+
+    get '/favicon.ico' do
+    end
+
   end
 end
