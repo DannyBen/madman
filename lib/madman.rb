@@ -5,6 +5,7 @@ require 'sinatra/reloader'
 require 'slim'
 require 'string-direction'
 
+require 'madman/version'
 require 'madman/cli'
 require 'madman/injector'
 
