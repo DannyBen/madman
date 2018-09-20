@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'bin/madness-serve' do
+describe 'bin/madman serve' do
   subject { Madman::CLI.runner }
 
   context "without arguments" do
@@ -20,7 +20,7 @@ describe 'bin/madness-serve' do
     let(:argv) { %W[serve .] }
 
     it "calls the server" do
-      expect(Server).to receive(:run!)
+      expect(DirServer).to receive(:run!)
       expect{ subject.run argv }.to output(/Starting server/).to_stdout
     end
   end

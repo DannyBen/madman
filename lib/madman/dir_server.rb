@@ -1,13 +1,9 @@
 module Madman
-  class Server < ServerBase
+  class DirServer < ServerBase
     set :public_folder, -> { File.expand_path(settings.dir) }
 
     before do
       @renderer = settings.respond_to?(:renderer) ? settings.renderer : :default
-    end
-
-    get '/favicon.ico' do
-      
     end
 
     get '/*' do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'bin/madness-readme' do
+describe 'bin/madman readme' do
   subject { Madman::CLI.runner }
 
   context "without arguments" do
