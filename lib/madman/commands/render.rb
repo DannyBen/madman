@@ -3,7 +3,7 @@ module Madman
     class Render < MisterBin::Command
       include Colsole
 
-      help "Render markdown to HTML"
+      help "Render markdown or YAML to HTML"
 
       usage "madman render FILE [--github --save OUTFILE]"
       usage "madman render (-h|--help)"
@@ -11,13 +11,14 @@ module Madman
       option "--github", "Render using the GitHub API\nRequires setting the GITHUB_ACCESS_TOKEN environment variable"
       option "--save OUTFILE", "Save the output to a file"
 
-      param "FILE", "The input markdown file"
+      param "FILE", "The input markdown or YAML file"
 
       environment "GITHUB_ACCESS_TOKEN", "Your GitHub API access token\nGenerate one here: https://github.com/settings/tokens"
 
       example "madman render README.md"
       example "madman render README.md --github"
       example "madman render README.md --save out.html"
+      example "madman render file.yml --save out.html"
 
       def run(args)
         infile = args['FILE']

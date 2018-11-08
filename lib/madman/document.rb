@@ -1,12 +1,21 @@
+require 'madman/injector'
+require 'madman/renderers'
+
 module Madman
   class Document
     include Injector
 
     attr_reader :filename
-    attr_accessor :text
+    attr_accessor :text, :yaml_mode
 
     def self.from_file(file)
-      new File.read(file), file
+      if File.extname(file) == '.yml'
+        result = new YAML.load_file(file), file
+        result.yaml_mode = true
+        result
+      else
+        new File.read(file), file
+      end
     end
 
     def initialize(text, filename=nil)
@@ -15,7 +24,11 @@ module Madman
     end
 
     def render(renderer=:default)
-      renderers[renderer].render text
+      if yaml_mode
+        renderers[:yaml].render text, title: File.basename(filename, '.yml')
+      else
+        renderers[renderer].render text
+      end
     end
 
     def rtl?
@@ -28,7 +41,7 @@ module Madman
       File.write save_as, text
     end
 
-    private
+  private
 
     def detector
       @detector ||= StringDirection::Detector.new :dominant

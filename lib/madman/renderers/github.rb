@@ -5,7 +5,7 @@ module Madman
         client.markdown text
       end
 
-      private
+    private
 
       def self.client
         Octokit::Client.new access_token: access_token

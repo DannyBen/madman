@@ -41,6 +41,7 @@ Features
       compatibility.
 - [x] Automatic detection of Right-to-Left markdown files for HTML rendering.
 - [x] Generate navigation README in folders without one.
+- [x] Convert YAML file to an interactive HTML with collapsible sections.
 - [ ] Generate breadcrumbs.
 - [ ] Combine multiple markdown files to one.
 - [ ] Table of Contents generation for a single file.
@@ -56,15 +57,15 @@ Usage
 $ madman
 Commands:
   nav      Add site-wide navigation links to README files
-  preview  Serve a markdown file using a local server
+  preview  Serve a markdown or YAML file using a local server
   readme   Create README in all qualified sub directories
-  render   Render markdown to HTML
+  render   Render markdown or YAML to HTML
   serve    Serve a markdown directory using a local server
 ```
 
 <!-- usage -->
 
-### Render Markdown to File
+### Render Markdown or YAML to HTML
 
 <!-- render -->
 
@@ -82,7 +83,7 @@ Usage:
 
 ```
 $ madman render --help
-Render markdown to HTML
+Render markdown or YAML to HTML
 
 Usage:
   madman render FILE [--github --save OUTFILE]
@@ -101,7 +102,7 @@ Options:
 
 Parameters:
   FILE
-    The input markdown file
+    The input markdown or YAML file
 
 Environment Variables:
   GITHUB_ACCESS_TOKEN
@@ -112,12 +113,13 @@ Examples:
   madman render README.md
   madman render README.md --github
   madman render README.md --save out.html
+  madman render file.yml --save out.html
 ```
 
 <!-- render-help -->
 </details>
 
-### Preview Markdown in Browser
+### Preview Markdown or HTML in Browser
 
 <!-- preview -->
 
@@ -134,7 +136,7 @@ Usage:
 
 ```
 $ madman preview --help
-Serve a markdown file using a local server
+Serve a markdown or YAML file using a local server
 
 This command will start a local server with two endpoints:
   /         will render the markdown with the default renderer
@@ -156,7 +158,7 @@ Options:
 
 Parameters:
   FILE
-    The input markdown file
+    The input markdown or YAML file
 
 Environment Variables:
   GITHUB_ACCESS_TOKEN
@@ -167,6 +169,7 @@ Environment Variables:
 Examples:
   madman preview README.md
   madman preview README.md -p4000
+  madman preview file.yml
 ```
 
 <!-- preview-help --></details>

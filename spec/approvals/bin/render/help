@@ -1,4 +1,4 @@
-Render markdown to HTML
+Render markdown or YAML to HTML
 
 Usage:
   madman render FILE [--github --save OUTFILE]
@@ -17,7 +17,7 @@ Options:
 
 Parameters:
   FILE
-    The input markdown file
+    The input markdown or YAML file
 
 Environment Variables:
   GITHUB_ACCESS_TOKEN
@@ -28,3 +28,4 @@ Examples:
   madman render README.md
   madman render README.md --github
   madman render README.md --save out.html
+  madman render file.yml --save out.html

@@ -20,7 +20,7 @@ module Madman
       result
     end
 
-    private
+  private
 
     def files
       result = Dir["#{dir}/*.md"]

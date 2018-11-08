@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <style type="text/css">
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+      }
+      
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+      .s:hover {
+        cursor: pointer;
+      }
+      
+      .hidden {
+        display: none;
+        margin-left: 10px;
+      }
+    </style>
+    <div class="markdown-body">
+      <h1>
+        <a href="#" id="toggle-all">hello</a>
+      </h1>
+      <div>
+        <p>Any key that begins with _ will only render its value</p>
+      
+      </div>
+      <h2><a href='#caption-2' class='clickable'>Caption</a></h2>
+      <div class='hidden' id='caption-2'>
+        <h3><a href='#subcaption-3' class='clickable'>SubCaption</a></h3>
+        <div class='hidden' id='subcaption-3'>
+          <p><strong>Some Markdown</strong></p>
+      <ul>
+      <li>Hello</li>
+      <li>World</li>
+      </ul>
+      
+        </div>
+      </div>
+    </div>
+    <script>
+      (function() {
+        $(function() {
+          $('.clickable').on("click", function(e) {
+            var target;
+            e.preventDefault();
+            target = $(this).attr('href');
+            return $(target).toggle();
+          });
+          return $('#toggle-all').on("click", function(e) {
+            e.preventDefault();
+            return $('.hidden').toggle();
+          });
+        });
+      
+      }).call(this);
+      
+    </script>
+  </body>
+</html>

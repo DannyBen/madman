@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   # we are locking sinatra to 2.0.3 due to this issue:
   # https://github.com/sinatra/sinatra/issues/1476
   s.add_runtime_dependency 'sinatra', '2.0.3'
+  s.add_runtime_dependency 'requires', '0.1'
   s.add_runtime_dependency 'commonmarker', '~> 0.17'
   s.add_runtime_dependency 'mister_bin', '~> 0.3'
   s.add_runtime_dependency 'puma', '~> 3.11'
@@ -27,16 +28,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'slim', '~> 3.0'
   s.add_runtime_dependency 'string-direction', '~> 1.2'
   s.add_runtime_dependency 'octokit', '~> 4.9'
-
-  s.add_development_dependency 'byebug', '~> 10.0'
-  s.add_development_dependency 'lp', '~> 0.0'
-  s.add_development_dependency 'rack-test', '~> 1.0'
-  s.add_development_dependency 'rdoc', '~> 6.0'
-  s.add_development_dependency 'rspec', '~> 3.6'
-  s.add_development_dependency 'rspec-html-matchers', '~> 0.9'
-  s.add_development_dependency 'rspec_fixtures', '~> 0.3'
-  s.add_development_dependency 'runfile', '~> 0.10'
-  s.add_development_dependency 'runfile-tasks', '~> 0.4'
-  s.add_development_dependency 'simplecov', '~> 0.15'
-  s.add_development_dependency 'yard', '~> 0.9'
+  s.add_runtime_dependency 'sass', "~> 3.6"
+  s.add_runtime_dependency 'coffee-script', '~> 2.4'
 end

@@ -22,7 +22,7 @@ module Madman
       type == :file
     end
 
-    private
+  private
 
     def path_without_extension
       @path_without_extension ||= path.sub(/\.md$/, '')

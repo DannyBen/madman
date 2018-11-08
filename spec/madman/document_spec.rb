@@ -16,11 +16,29 @@ describe Document do
     it "sets the instance filename" do
       expect(subject.filename).to eq filename
     end
+
+    context "with a yaml file" do
+      let(:filename) { 'spec/fixtures/hello.yml' }
+
+      it "loads the YAML hash into the instance text" do
+        expect(subject.text).to be_a Hash
+        expect(subject.text).to have_key "Caption"
+      end
+    end
   end
 
   describe '#render' do
     it 'returns HTML' do
       expect(subject.render).to match_fixture('document/render')
+    end
+
+    context "with a YAML file" do
+      let(:filename) { 'spec/fixtures/hello.yml' }
+
+      it "also returns HTML" do
+        expect(subject.render).to match_fixture('document/render_yaml')
+      end
+      
     end
   end
 

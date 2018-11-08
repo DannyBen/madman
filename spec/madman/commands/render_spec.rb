@@ -24,7 +24,7 @@ describe 'bin/madman render' do
     end
   end
 
-  context "with input file and --save", :focus do
+  context "with input file and --save" do
     let(:infile) { 'spec/fixtures/hello.md' }
     let(:outfile) { 'tmp/out.html' }
     let(:argv) { %W[render #{infile} --save #{outfile}] }
