@@ -1,5 +1,41 @@
 # Change Log
 
+## [v0.2.3](https://github.com/DannyBen/madman/tree/v0.2.3) (2018-11-08)
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.2.2...v0.2.3)
+
+**Merged pull requests:**
+
+- Add ability to render YAML into an interactive HTML [\#14](https://github.com/DannyBen/madman/pull/14) ([DannyBen](https://github.com/DannyBen))
+
+## [v0.2.2](https://github.com/DannyBen/madman/tree/v0.2.2) (2018-09-20)
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.2.1...v0.2.2)
+
+**Merged pull requests:**
+
+- Fix missing dependencies [\#13](https://github.com/DannyBen/madman/pull/13) ([DannyBen](https://github.com/DannyBen))
+- Lock Sinatra to 2.0.3 [\#12](https://github.com/DannyBen/madman/pull/12) ([DannyBen](https://github.com/DannyBen))
+
+## [v0.2.1](https://github.com/DannyBen/madman/tree/v0.2.1) (2018-08-06)
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.2.0...v0.2.1)
+
+## [v0.2.0](https://github.com/DannyBen/madman/tree/v0.2.0) (2018-08-05)
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.1.3...v0.2.0)
+
+**Merged pull requests:**
+
+- Migrate to new mister\_bin [\#11](https://github.com/DannyBen/madman/pull/11) ([DannyBen](https://github.com/DannyBen))
+
+## [v0.1.3](https://github.com/DannyBen/madman/tree/v0.1.3) (2018-05-26)
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.1.2...v0.1.3)
+
+**Implemented enhancements:**
+
+- Generate empty \(navigation\) README files in all qualified folders [\#7](https://github.com/DannyBen/madman/issues/7)
+
+**Merged pull requests:**
+
+- Nav generation improvements [\#10](https://github.com/DannyBen/madman/pull/10) ([DannyBen](https://github.com/DannyBen))
+
 ## [v0.1.2](https://github.com/DannyBen/madman/tree/v0.1.2) (2018-05-21)
 [Full Changelog](https://github.com/DannyBen/madman/compare/v0.1.0...v0.1.2)
 
