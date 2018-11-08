@@ -1,4 +1,3 @@
-require 'mister_bin'
 require 'madman/commands'
 
 module Madman

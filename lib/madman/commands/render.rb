@@ -18,6 +18,7 @@ module Madman
       example "madman render README.md"
       example "madman render README.md --github"
       example "madman render README.md --save out.html"
+      example "madman render file.yml --save out.html"
 
       def run(args)
         infile = args['FILE']

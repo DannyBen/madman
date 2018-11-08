@@ -28,3 +28,4 @@ Examples:
   madman render README.md
   madman render README.md --github
   madman render README.md --save out.html
+  madman render file.yml --save out.html

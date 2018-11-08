@@ -19,6 +19,7 @@ module Madman
 
       example "madman preview README.md"
       example "madman preview README.md -p4000"
+      example "madman preview file.yml"
 
       def run(args)
         file = args['FILE']

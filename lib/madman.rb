@@ -1,5 +1,6 @@
 require 'byebug' if ENV['BYEBUG']
 require 'commonmarker'
+require 'mister_bin'
 require 'octokit'
 require 'requires'
 require 'sinatra/base'

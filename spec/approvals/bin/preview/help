@@ -31,3 +31,4 @@ Environment Variables:
 Examples:
   madman preview README.md
   madman preview README.md -p4000
+  madman preview file.yml
