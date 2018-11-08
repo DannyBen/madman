@@ -32,7 +32,7 @@ describe Document do
       expect(subject.render).to match_fixture('document/render')
     end
 
-    context "with a YAML file", :focus do
+    context "with a YAML file" do
       let(:filename) { 'spec/fixtures/hello.yml' }
 
       it "also returns HTML" do
