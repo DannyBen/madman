@@ -27,10 +27,6 @@ module Madman
       { pretty: true, disable_escape: true }
     end
 
-    def save(filename)
-      File.write filename, render
-    end
-
     def tree
       @tree ||= tree!
     end
