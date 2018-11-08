@@ -1,4 +1,4 @@
-Serve a markdown file using a local server
+Serve a markdown or YAML file using a local server
 
 This command will start a local server with two endpoints:
   /         will render the markdown with the default renderer
@@ -20,7 +20,7 @@ Options:
 
 Parameters:
   FILE
-    The input markdown file
+    The input markdown or YAML file
 
 Environment Variables:
   GITHUB_ACCESS_TOKEN

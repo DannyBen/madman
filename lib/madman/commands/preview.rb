@@ -3,7 +3,7 @@ module Madman
     class Preview < MisterBin::Command
       include Colsole
 
-      summary "Serve a markdown file using a local server"
+      summary "Serve a markdown or YAML file using a local server"
 
       help "This command will start a local server with two endpoints:\n  /         will render the markdown with the default renderer\n  /github   will render with the GitHub API"
 
@@ -13,7 +13,7 @@ module Madman
       option "-p --port N", "Set server port [default: 3000]"
       option "-b --bind ADDRESS", "Set server listen address [default: 0.0.0.0]"
 
-      param "FILE", "The input markdown file"
+      param "FILE", "The input markdown or YAML file"
 
       environment "GITHUB_ACCESS_TOKEN", "Your GitHub API access token\nRequired only if you wish to use the '/github' endpoint\nGenerate one here: https://github.com/settings/tokens"
 

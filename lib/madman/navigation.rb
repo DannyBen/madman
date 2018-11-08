@@ -1,3 +1,5 @@
+require 'madman/directory'
+
 module Madman
   # Generate a markdown Table of Contents
   class Navigation
@@ -15,7 +17,7 @@ module Madman
       @markdown ||= markdown!
     end
 
-    private
+  private
 
     def markdown!
       result = []

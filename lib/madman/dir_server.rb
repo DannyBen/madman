@@ -1,3 +1,5 @@
+require 'madman/server_base'
+
 module Madman
   class DirServer < ServerBase
     set :public_folder, -> { File.expand_path(settings.dir) }
@@ -16,7 +18,7 @@ module Madman
       slim :template
     end
 
-    private
+  private
 
     def find_file(path)
       type = :file
