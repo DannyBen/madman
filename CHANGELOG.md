@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.4](https://github.com/DannyBen/madman/tree/v0.2.4) (2018-12-13)
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.2.3...v0.2.4)
+
+**Merged pull requests:**
+
+- Adjust to new mister\_bin 0.6.0 [\#15](https://github.com/DannyBen/madman/pull/15) ([DannyBen](https://github.com/DannyBen))
+
 ## [v0.2.3](https://github.com/DannyBen/madman/tree/v0.2.3) (2018-11-08)
 [Full Changelog](https://github.com/DannyBen/madman/compare/v0.2.2...v0.2.3)
 
