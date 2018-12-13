@@ -17,7 +17,7 @@ module Madman
       example "madman readme ."
       example "madman readme path/to/docs --dry"
 
-      def run(args)
+      def run
         dir = args['DIR']
         basedir = Madman::Directory.new dir, dir
 
