@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'mister_bin', '~> 0.6'
   s.add_runtime_dependency 'puma', '~> 3.11'
   s.add_runtime_dependency 'sinatra-contrib', '~> 2.0'
-  s.add_runtime_dependency 'slim', '~> 3.0'
+  s.add_runtime_dependency 'slim', '~> 4.0'
   s.add_runtime_dependency 'colsole', '~> 0.5'
   s.add_runtime_dependency 'string-direction', '~> 1.2'
   s.add_runtime_dependency 'octokit', '~> 4.9'
