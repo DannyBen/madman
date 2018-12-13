@@ -26,9 +26,7 @@ module Madman
       example "madman nav path/to/docs --force --marker toc"
       example "madman nav path/to/docs --dry -v -d2"
 
-      def run(args)
-        @args = args
-
+      def run
         if recursive?
           Dir["#{dir}/**/#{target}"].each { |file| update_file file }
         else
@@ -55,15 +53,14 @@ module Madman
 
       # CLI Arguments
 
-      def args;         @args; end
-      def dir;          args['DIR'] || '.'; end
-      def depth;        args['--depth'].to_i; end
-      def marker;       args['--marker']; end
-      def target;       args['--target']; end
-      def force?;       args['--force']; end
-      def dry?;         args['--dry']; end
-      def verbose?;     args['--verbose']; end
-      def recursive?;   args['--recursive']; end
+      def dir;        args['DIR'] || '.'; end
+      def depth;      args['--depth'].to_i; end
+      def marker;     args['--marker']; end
+      def target;     args['--target']; end
+      def force?;     args['--force']; end
+      def dry?;       args['--dry']; end
+      def verbose?;   args['--verbose']; end
+      def recursive?; args['--recursive']; end
       
     end
   end

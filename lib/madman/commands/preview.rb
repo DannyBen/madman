@@ -21,7 +21,7 @@ module Madman
       example "madman preview README.md -p4000"
       example "madman preview file.yml"
 
-      def run(args)
+      def run
         file = args['FILE']
         port = args['--port']
         bind = args['--bind']

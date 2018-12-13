@@ -19,7 +19,7 @@ module Madman
       example "madman serve"
       example "madman serve path/to/docs -p4000 --github"
 
-      def run(args)
+      def run
         dir = args['DIR']
         port = args['--port']
         bind = args['--bind']
