@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.2.5](https://github.com/DannyBen/madman/tree/v0.2.5) (2019-01-04)
+[Full Changelog](https://github.com/DannyBen/madman/compare/v0.2.4...v0.2.5)
+
+**Merged pull requests:**
+
+- Update sinatra to 2.0.5 [\#16](https://github.com/DannyBen/madman/pull/16) ([DannyBen](https://github.com/DannyBen))
+
 ## [v0.2.4](https://github.com/DannyBen/madman/tree/v0.2.4) (2018-12-13)
 [Full Changelog](https://github.com/DannyBen/madman/compare/v0.2.3...v0.2.4)
 
