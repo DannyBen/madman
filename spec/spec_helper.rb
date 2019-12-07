@@ -18,6 +18,9 @@ include Madman
 # Helpers
 require_relative 'rspec_mixin'
 
+# Consistent Colsole output (for rspec_fixtures)
+ENV['TTY'] = 'on'
+
 RSpec.configure do |c|
   c.include RSpecMixin
   c.include RSpecHtmlMatchers
