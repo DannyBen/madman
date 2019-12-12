@@ -12,7 +12,10 @@ require 'mister_bin'
 require 'rack/test'
 ENV['RACK_ENV'] = 'test'
 
-# That's us!
+# Consistent Colsole output (for rspec_fixtures)
+ENV['TTY'] = 'on'
+
+# That's us
 include Madman
 
 # Helpers
