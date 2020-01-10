@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'commonmarker', '~> 0.20'
   s.add_runtime_dependency 'mister_bin', '~> 0.6'
   s.add_runtime_dependency 'puma', '~> 4.0'
-  s.add_runtime_dependency 'sinatra-contrib', '~> 2.0.5'
+  # s.add_runtime_dependency 'sinatra-contrib', '~> 2.0.5'
   s.add_runtime_dependency 'slim', '~> 4.0'
   s.add_runtime_dependency 'colsole', '~> 0.5'
   s.add_runtime_dependency 'string-direction', '~> 1.2'
