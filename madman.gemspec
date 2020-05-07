@@ -29,4 +29,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'octokit', '~> 4.14'
   s.add_runtime_dependency 'sass', "~> 3.7"
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
+  s.add_runtime_dependency 'addressable', '~> 2.7'
 end

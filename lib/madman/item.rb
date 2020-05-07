@@ -1,3 +1,5 @@
+require 'addressable'
+
 module Madman
   class Item
     attr_reader :path, :type, :basedir
@@ -11,7 +13,7 @@ module Madman
     end
 
     def href
-      URI.escape(path_without_extension.sub(/^#{basedir}\//, ''))
+      Addressable::URI.escape(path_without_extension.sub(/^#{basedir}\//, ''))
     end
 
     def dir?

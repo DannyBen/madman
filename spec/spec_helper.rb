@@ -14,6 +14,8 @@ ENV['RACK_ENV'] = 'test'
 
 # Consistent Colsole output (for rspec_fixtures)
 ENV['TTY'] = 'on'
+ENV['COLUMNS'] = '80'
+ENV['LINES'] = '30'
 
 # That's us
 include Madman
