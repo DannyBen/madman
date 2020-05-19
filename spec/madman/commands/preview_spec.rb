@@ -5,13 +5,13 @@ describe 'bin/madman preview' do
 
   context "without arguments" do
     it "shows short usage" do
-      expect{ subject.run %w[preview]}.to output_fixture('bin/preview/usage')
+      expect{ subject.run %w[preview]}.to output_approval('bin/preview/usage')
     end
   end
 
   context "with --help" do
     it "shows long usage" do
-      expect{ subject.run %w[preview --help] }.to output_fixture('bin/preview/help')
+      expect{ subject.run %w[preview --help] }.to output_approval('bin/preview/help')
     end
   end
 

@@ -5,7 +5,7 @@ describe Renderers::Default do
 
   describe '::render' do
     it 'returns HTML' do
-      expect(subject.render '# hello world').to match_fixture('renderer/default')
+      expect(subject.render '# hello world').to match_approval('renderer/default')
     end
   end
 end

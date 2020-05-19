@@ -28,8 +28,6 @@ RSpec.configure do |c|
   c.include RSpecHtmlMatchers
   c.include Rack::Test::Methods
 
-  c.fixtures_path = 'spec/approvals'
-
   def app; described_class; end
 
   c.before(:suite) { Dir.mkdir 'tmp' unless Dir.exist? 'tmp' }

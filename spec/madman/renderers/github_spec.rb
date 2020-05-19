@@ -12,7 +12,7 @@ describe Renderers::GitHub do
     end
 
     it 'returns HTML', if: ENV['GITHUB_ACCESS_TOKEN'] do
-      expect(subject.render '# hello world').to match_fixture('renderer/github')
+      expect(subject.render '# hello world').to match_approval('renderer/github')
     end
 
     context "when GITHUB_ACCESS_TOKEN is unset" do

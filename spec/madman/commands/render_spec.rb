@@ -5,13 +5,13 @@ describe 'bin/madman render' do
 
   context "without arguments" do
     it "shows short usage" do
-      expect{ subject.run %w[render]}.to output_fixture('bin/render/usage')
+      expect{ subject.run %w[render]}.to output_approval('bin/render/usage')
     end
   end
 
   context "with --help" do
     it "shows long usage" do
-      expect{ subject.run %w[render --help] }.to output_fixture('bin/render/help')
+      expect{ subject.run %w[render --help] }.to output_approval('bin/render/help')
     end
   end
 
@@ -20,7 +20,7 @@ describe 'bin/madman render' do
     let(:argv) { %W[render #{infile}] }
 
     it "prints HTML to stdout" do
-      expect{ subject.run argv }.to output_fixture('bin/render/basic')
+      expect{ subject.run argv }.to output_approval('bin/render/basic')
     end
   end
 
@@ -35,8 +35,8 @@ describe 'bin/madman render' do
     end
 
     it "saves HTML" do
-      expect{ subject.run argv }.to output_fixture('bin/render/save')
-      expect(File.read outfile).to match_fixture('bin/render/basic')
+      expect{ subject.run argv }.to output_approval('bin/render/save')
+      expect(File.read outfile).to match_approval('bin/render/basic')
     end
   end
 end

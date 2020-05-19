@@ -25,7 +25,7 @@ describe Injector do
       context "when force is used" do
         it "appends the content to the end of the text" do
           subject.inject 'new content', marker: 'no-such-mark', force: true
-          expect(subject.text).to match_fixture('inkector/appended')
+          expect(subject.text).to match_approval('inkector/appended')
         end
       end
     end
@@ -35,14 +35,14 @@ describe Injector do
 
       it "replaces it" do
         subject.inject 'new content', marker: 'mark'
-        expect(subject.text).to match_fixture('inkector/replaced-once')
+        expect(subject.text).to match_approval('inkector/replaced-once')
       end
     end
 
     context "when the marker is found twice in the text" do
       it "replaces the markers and the content between them" do
         subject.inject 'new content', marker: 'mark'
-        expect(subject.text).to match_fixture('inkector/replaced')
+        expect(subject.text).to match_approval('inkector/replaced')
       end
     end
   end

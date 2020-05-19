@@ -10,7 +10,7 @@ describe Document do
     end
 
     it "loads the markdown into the instance" do
-      expect(subject.text).to match_fixture('hello.md')
+      expect(subject.text).to match_approval('hello.md')
     end
 
     it "sets the instance filename" do
@@ -29,14 +29,14 @@ describe Document do
 
   describe '#render' do
     it 'returns HTML' do
-      expect(subject.render).to match_fixture('document/render')
+      expect(subject.render).to match_approval('document/render')
     end
 
     context "with a YAML file" do
       let(:filename) { 'spec/fixtures/hello.yml' }
 
       it "also returns HTML" do
-        expect(subject.render).to match_fixture('document/render_yaml')
+        expect(subject.render).to match_approval('document/render_yaml')
       end
       
     end

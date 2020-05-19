@@ -5,13 +5,13 @@ describe 'bin/madman serve' do
 
   context "without arguments" do
     it "shows short usage" do
-      expect{ subject.run %w[serve]}.to output_fixture('bin/serve/usage')
+      expect{ subject.run %w[serve]}.to output_approval('bin/serve/usage')
     end
   end
 
   context "with --help" do
     it "shows long usage" do
-      expect{ subject.run %w[serve --help] }.to output_fixture('bin/serve/help')
+      expect{ subject.run %w[serve --help] }.to output_approval('bin/serve/help')
     end
   end
 
