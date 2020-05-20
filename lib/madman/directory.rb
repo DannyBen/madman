@@ -1,9 +1,9 @@
 module Madman
-  # Represents a directory with markdown file sand subflders.
+  # Represents a directory with markdown files and subflders.
   class Directory
     attr_reader :dir, :basedir
 
-    def initialize(dir, basedir=nil)
+    def initialize(dir, basedir = nil)
       @dir = dir
       @basedir = basedir || dir
     end

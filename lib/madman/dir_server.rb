@@ -8,14 +8,28 @@ module Madman
       @renderer = settings.respond_to?(:renderer) ? settings.renderer : :default
     end
 
+    not_found do
+      content_type :text
+      "4O4 Not Found"
+    end
+
+    get '/favicon.ico' do
+      content_type :text
+      '(oOo)'
+    end
+    
     get '/*' do
       path = params[:splat].first
 
       type, file = find_file(path)
       redirect "#{path}/" if type == :dir and path[-1] != '/'
 
-      @doc = Document.from_file file 
-      slim :template
+      if File.exist? file
+        @doc = Document.from_file file
+        slim :template
+      else
+        halt 404
+      end
     end
 
   private

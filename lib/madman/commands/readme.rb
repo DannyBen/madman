@@ -19,7 +19,7 @@ module Madman
 
       def run
         dir = args['DIR']
-        basedir = Madman::Directory.new dir, dir
+        basedir = Madman::Directory.new dir
 
         dirs = basedir.deep_list.select { |i| i.dir? }.map { |i| i.path }
         dirs.each do |dir|
