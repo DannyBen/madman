@@ -6,3 +6,7 @@ Caption:
 
     - Hello
     - World
+
+  SomeArray:
+  - Hello
+  - World

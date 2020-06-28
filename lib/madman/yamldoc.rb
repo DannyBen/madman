@@ -1,8 +1,10 @@
 require 'madman/refinements/string'
+require 'madman/refinements/array'
 
 module Madman
   class YAMLDoc
     using StringRefinements
+    using ArrayRefinements
 
     attr_reader :yaml, :title
 
