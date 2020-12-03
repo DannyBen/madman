@@ -56,6 +56,13 @@ action :cloc do
   run "cloc . --exclude-dir coverage,spec,templates,tmp,dev --exclude-ext yml"
 end
 
+help   "Generate changelog and append old changelog"
+action :changelog do
+  run "git changelog --save"
+  # append older changelog (prior to switching to git-changelog)
+  run "cat .changelog.old.md >> CHANGELOG.md"
+end
+
 def command_output(command)
   say "Executing !txtgrn!#{command}"
   "\n```\n" + "$ #{command}\n" + `#{command}`.chomp + "\n```\n"
