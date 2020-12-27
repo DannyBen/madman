@@ -17,17 +17,16 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.required_ruby_version = ">= 2.4.0"
 
-  s.add_runtime_dependency 'sinatra', '~> 2.0'
-  s.add_runtime_dependency 'requires', '~> 0.1'
+  s.add_runtime_dependency 'addressable', '~> 2.7'
+  s.add_runtime_dependency 'coffee-script', '~> 2.4'
+  s.add_runtime_dependency 'colsole', '~> 0.5'
   s.add_runtime_dependency 'commonmarker', '~> 0.20'
   s.add_runtime_dependency 'mister_bin', '~> 0.6'
-  s.add_runtime_dependency 'puma', '~> 5.1'
-  # s.add_runtime_dependency 'sinatra-contrib', '~> 2.0.5'
-  s.add_runtime_dependency 'slim', '~> 4.0'
-  s.add_runtime_dependency 'colsole', '~> 0.5'
-  s.add_runtime_dependency 'string-direction', '~> 1.2'
   s.add_runtime_dependency 'octokit', '~> 4.14'
-  s.add_runtime_dependency 'sass', "~> 3.7"
-  s.add_runtime_dependency 'coffee-script', '~> 2.4'
-  s.add_runtime_dependency 'addressable', '~> 2.7'
+  s.add_runtime_dependency 'puma', '~> 5.1'
+  s.add_runtime_dependency 'requires', '~> 0.1'
+  s.add_runtime_dependency 'sassc', '~> 2.4'
+  s.add_runtime_dependency 'sinatra', '~> 2.0'
+  s.add_runtime_dependency 'slim', '~> 4.0'
+  s.add_runtime_dependency 'string-direction', '~> 1.2'
 end
