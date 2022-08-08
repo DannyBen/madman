@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.executables = ['madman']
   s.homepage    = 'https://github.com/dannyben/madman'
   s.license     = 'MIT'
-  s.required_ruby_version = ">= 2.6.0"
+  s.required_ruby_version = ">= 2.7.0"
 
   s.add_runtime_dependency 'addressable', '~> 2.7'
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
