@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'commonmarker', '~> 0.23', '>= 0.23.4'
   s.add_runtime_dependency 'mister_bin', '~> 0.6'
   s.add_runtime_dependency 'octokit', '~> 5.2'
-  s.add_runtime_dependency 'puma', '>= 5.1'
+  s.add_runtime_dependency 'puma', '>= 5.1', '< 7'
   s.add_runtime_dependency 'requires', '~> 0.1'
   s.add_runtime_dependency 'sassc', '~> 2.4'
   s.add_runtime_dependency 'sinatra', '~> 3.0'
