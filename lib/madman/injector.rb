@@ -6,12 +6,12 @@ module Madman
 
       content = [marker, content, marker].join "\n"
 
-      if found_markers == 0 and force
+      if found_markers.zero? && force
         self.text += "\n\n#{content}"
       elsif found_markers == 1
-        text.gsub! /#{marker}/im, content
+        text.gsub!(/#{marker}/im, content)
       elsif found_markers == 2
-        text.gsub! /#{marker}.*#{marker}/im, content
+        text.gsub!(/#{marker}.*#{marker}/im, content)
       end
     end
   end

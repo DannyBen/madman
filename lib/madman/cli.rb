@@ -14,5 +14,4 @@ module Madman
       runner
     end
   end
-
 end

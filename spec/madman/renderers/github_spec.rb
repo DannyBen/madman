@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe Renderers::GitHub do
+describe Renderers::Github do
   subject { described_class }
 
   describe '::render' do
@@ -15,10 +13,10 @@ describe Renderers::GitHub do
       expect(subject.render '# hello world').to match_approval('renderer/github')
     end
 
-    context "when GITHUB_ACCESS_TOKEN is unset" do
+    context 'when GITHUB_ACCESS_TOKEN is unset' do
       it 'raises ArgumentError' do
         without_env 'GITHUB_ACCESS_TOKEN' do
-          expect{ subject.render '# hello world' }.to raise_error(ArgumentError, "Please set GITHUB_ACCESS_TOKEN")
+          expect { subject.render '# hello world' }.to raise_error(ArgumentError, 'Please set GITHUB_ACCESS_TOKEN')
         end
       end
     end

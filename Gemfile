@@ -1,12 +1,12 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gem 'byebug'
+gem 'colsole'
 gem 'lp'
 gem 'rack-test'
 gem 'rspec'
-gem 'rspec-html-matchers'
 gem 'rspec_approvals'
-gem 'colsole'
+gem 'rspec-html-matchers'
 gem 'runfile'
 gem 'runfile-tasks'
 gem 'simplecov'

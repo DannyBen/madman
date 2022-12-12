@@ -40,7 +40,7 @@ module Madman
       @counter += 1
     end
 
-    def tree!(data=nil, indent=0, caption=2)
+    def tree!(data = nil, indent = 0, caption = 2)
       data ||= yaml
       result = []
       caption = 6 if caption > 6
@@ -65,14 +65,13 @@ module Madman
       end
 
       if value.is_a? Hash
-        result.push tree!(value, indent+1, caption+1)
+        result.push tree!(value, indent + 1, caption + 1)
       elsif value
-        result.push "#{space * (indent+1)}#{value.to_html}"
+        result.push "#{space * (indent + 1)}#{value.to_html}"
       end
 
       result.push "#{space * indent}</div>"
       result
     end
-
   end
 end

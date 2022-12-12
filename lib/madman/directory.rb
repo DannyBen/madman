@@ -7,7 +7,7 @@ module Madman
       @dir = dir
       @basedir = basedir || dir
     end
-    
+
     def list
       @list ||= (dirs + files)
     end
@@ -30,7 +30,7 @@ module Madman
 
     def dirs
       result = Dir["#{dir}/*"].select { |f| File.directory? f }
-      result.reject! do |f| 
+      result.reject! do |f|
         basename = File.basename(f)
         basename =~ /^[a-z_\-0-9]+$/
       end

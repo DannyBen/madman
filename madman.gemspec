@@ -1,4 +1,4 @@
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'date'
 require 'madman/version'
@@ -6,16 +6,15 @@ require 'madman/version'
 Gem::Specification.new do |s|
   s.name        = 'madman'
   s.version     = Madman::VERSION
-  s.date        = Date.today.to_s
-  s.summary     = "The Markdown Swiss Army Knife"
-  s.description = "A command line utility for markdown fun"
-  s.authors     = ["Danny Ben Shitrit"]
+  s.summary     = 'The Markdown Swiss Army Knife'
+  s.description = 'A command line utility for markdown fun'
+  s.authors     = ['Danny Ben Shitrit']
   s.email       = 'db@dannyben.com'
   s.files       = Dir['README.md', 'lib/**/*.*']
   s.executables = ['madman']
   s.homepage    = 'https://github.com/dannyben/madman'
   s.license     = 'MIT'
-  s.required_ruby_version = ">= 2.7.0"
+  s.required_ruby_version = '>= 3.0.0'
 
   s.add_runtime_dependency 'addressable', '~> 2.7'
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
@@ -29,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'sinatra', '~> 3.0'
   s.add_runtime_dependency 'slim', '~> 4.0'
   s.add_runtime_dependency 'string-direction', '~> 1.2'
+  s.metadata['rubygems_mfa_required'] = 'true'
 end

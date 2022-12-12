@@ -7,8 +7,8 @@ module Madman
     def self.available_renderers
       {
         default: Renderers::Default,
-        yaml: Renderers::YAML,
-        github: Renderers::GitHub,
+        yaml:    Renderers::YAML,
+        github:  Renderers::Github,
       }
     end
   end
