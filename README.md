@@ -36,8 +36,7 @@ Features
 - [ ] Ad-hoc server to allow editing of a local markdown file.
 - [x] Markdown generation with GitHub API (optional).
 - [x] Table of Contents generation for a folder of markdown files.
-- [x] Web server for an entire folder (like [Madness][1]) with GitHub Pages 
-      compatibility.
+- [x] Web server for an entire folder (like [Madness][1]) with GitHub Pages compatibility.
 - [x] Automatic detection of Right-to-Left markdown files for HTML rendering.
 - [x] Generate navigation README in folders without one.
 - [x] Convert YAML file to an interactive HTML with collapsible sections.

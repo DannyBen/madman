@@ -31,17 +31,6 @@ action :console, :c do
   system "bundle exec bin/console"
 end
 
-help   "Generate TOC to toc.txt"
-action :toc do
-  exewc 'gh-md-toc README.md > toc.txt'
-end
-
-help   "Generate changelog"
-action :changelog do
-  system 'github_changelog_generator --cache-file tmp/changlog-cache'  
-  system "git commit -am 'update changelog' && git push"
-end
-
 help   "Inject usage to README"
 action :usage do
   doc = Madman::Document.from_file 'README.md'
