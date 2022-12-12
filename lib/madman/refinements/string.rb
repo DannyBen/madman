@@ -1,7 +1,7 @@
 module StringRefinements
   refine String do
     def slug
-      downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      downcase.strip.tr(' ', '-').gsub(/[^\w-]/, '')
     end
 
     def to_html

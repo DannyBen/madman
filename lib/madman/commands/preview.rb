@@ -3,23 +3,28 @@ module Madman
     class Preview < MisterBin::Command
       include Colsole
 
-      summary "Serve a markdown or YAML file using a local server"
+      summary 'Serve a markdown or YAML file using a local server'
 
-      help "This command will start a local server with two endpoints:\n  /         will render the markdown with the default renderer\n  /github   will render with the GitHub API"
+      help <<~USAGE
+        This command will start a local server with two endpoints:
+          /         will render the markdown with the default renderer
+          /github   will render with the GitHub API
+      USAGE
 
-      usage "madman preview FILE [--port N --bind ADDRESS]"
-      usage "madman preview (-h|--help)"
+      usage 'madman preview FILE [--port N --bind ADDRESS]'
+      usage 'madman preview (-h|--help)'
 
-      option "-p --port N", "Set server port [default: 3000]"
-      option "-b --bind ADDRESS", "Set server listen address [default: 0.0.0.0]"
+      option '-p --port N', 'Set server port [default: 3000]'
+      option '-b --bind ADDRESS', 'Set server listen address [default: 0.0.0.0]'
 
-      param "FILE", "The input markdown or YAML file"
+      param 'FILE', 'The input markdown or YAML file'
 
-      environment "GITHUB_ACCESS_TOKEN", "Your GitHub API access token\nRequired only if you wish to use the '/github' endpoint\nGenerate one here: https://github.com/settings/tokens"
+      environment 'GITHUB_ACCESS_TOKEN',
+        "Your GitHub API access token\nRequired only if you wish to use the '/github' endpoint\nGenerate one here: https://github.com/settings/tokens"
 
-      example "madman preview README.md"
-      example "madman preview README.md -p4000"
-      example "madman preview file.yml"
+      example 'madman preview README.md'
+      example 'madman preview README.md -p4000'
+      example 'madman preview file.yml'
 
       def run
         file = args['FILE']
@@ -35,8 +40,6 @@ module Madman
         Madman::PreviewServer.set bind: bind, port: port, file: file
         Madman::PreviewServer.run!
       end
-
     end
   end
 end
-

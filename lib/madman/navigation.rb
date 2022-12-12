@@ -5,8 +5,9 @@ module Madman
   class Navigation
     attr_reader :dir, :depth
 
-    def initialize(dir='.', depth: 10)
-      @dir, @depth = dir, depth
+    def initialize(dir = '.', depth: 10)
+      @dir = dir
+      @depth = depth
     end
 
     def toc
@@ -28,16 +29,18 @@ module Madman
       result.join "\n"
     end
 
-    def toc!(path=dir, level=0)
+    def toc!(path = dir, level = 0)
       return [] unless level < depth
+
       list = Directory.new(path, dir).list
 
       result = []
       list.each do |item|
-        if item.type == :dir
+        case item.type
+        when :dir
           result.push level: level, item: item
-          result += toc! item.path, level+1
-        elsif item.type == :file
+          result += toc! item.path, level + 1
+        when :file
           result.push level: level, item: item
         end
       end

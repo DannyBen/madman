@@ -10,7 +10,7 @@ module Madman
       @renderer = :default
     end
 
-    get '/' do      
+    get '/' do
       slim :template
     end
 

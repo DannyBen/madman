@@ -27,8 +27,8 @@ RSpec.configure do |c|
   c.include RSpecMixin
   c.include RSpecHtmlMatchers
   c.include Rack::Test::Methods
-
-  def app; described_class; end
-
   c.before(:suite) { Dir.mkdir 'tmp' unless Dir.exist? 'tmp' }
+  c.example_status_persistence_file_path = 'spec/status.txt'
+
+  def app = described_class
 end

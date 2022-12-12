@@ -10,19 +10,19 @@ module Madman
 
     not_found do
       content_type :text
-      "4O4 Not Found"
+      '4O4 Not Found'
     end
 
     get '/favicon.ico' do
       content_type :text
       '(oOo)'
     end
-    
+
     get '/*' do
       path = params[:splat].first
 
       type, file = find_file(path)
-      redirect "#{path}/" if type == :dir and path[-1] != '/'
+      redirect "#{path}/" if (type == :dir) && (path[-1] != '/')
 
       if File.exist? file
         @doc = Document.from_file file
@@ -40,13 +40,12 @@ module Madman
 
       if File.directory? file
         type = path.empty? ? :root : :dir
-        file ="#{file}/README.md"
+        file = "#{file}/README.md"
       else
-        file ="#{file}.md"
+        file = "#{file}.md"
       end
 
       [type, file]
     end
-
   end
 end

@@ -1,10 +1,10 @@
 module Madman
   class ServerBase < Sinatra::Base
     set :views, File.expand_path('../views', __dir__)
-    
+
     Slim::Engine.set_options pretty: true
-    
-    # Reloader temporarily removed due to 
+
+    # Reloader temporarily removed due to
     # https://github.com/sinatra/sinatra/issues/1587
     #
     # configure :development do
@@ -13,7 +13,7 @@ module Madman
     # end
 
     get '/favicon.ico' do
+      ''
     end
-
   end
 end

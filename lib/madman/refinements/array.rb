@@ -1,7 +1,7 @@
 module ArrayRefinements
   refine Array do
     def to_markdown
-      map { |item| "- #{item}"}.join "\n"
+      map { |item| "- #{item}" }.join "\n"
     end
 
     def to_html

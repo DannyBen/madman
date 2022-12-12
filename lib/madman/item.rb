@@ -5,7 +5,9 @@ module Madman
     attr_reader :path, :type, :basedir
 
     def initialize(path, type, basedir)
-      @path, @type, @basedir = path, type, basedir
+      @path = path
+      @type = type
+      @basedir = basedir
     end
 
     def label
@@ -13,7 +15,7 @@ module Madman
     end
 
     def href
-      Addressable::URI.escape(path_without_extension.sub(/^#{basedir}\//, ''))
+      Addressable::URI.escape(path_without_extension.sub(%r{^#{basedir}/}, ''))
     end
 
     def dir?
@@ -31,4 +33,3 @@ module Madman
     end
   end
 end
-

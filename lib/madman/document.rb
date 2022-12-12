@@ -18,12 +18,12 @@ module Madman
       end
     end
 
-    def initialize(text, filename=nil)
+    def initialize(text, filename = nil)
       @text = text
       @filename = filename
     end
 
-    def render(renderer=:default)
+    def render(renderer = :default)
       if yaml_mode
         renderers[:yaml].render text, title: File.basename(filename, '.yml')
       else
@@ -35,9 +35,10 @@ module Madman
       detector.direction(text[0..200]) == 'rtl'
     end
 
-    def save(save_as=nil)
+    def save(save_as = nil)
       save_as ||= filename
-      raise ArgumentError, "No filename provided" unless save_as
+      raise ArgumentError, 'No filename provided' unless save_as
+
       File.write save_as, text
     end
 
