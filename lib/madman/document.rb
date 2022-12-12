@@ -10,7 +10,7 @@ module Madman
 
     def self.from_file(file)
       if File.extname(file) == '.yml'
-        result = new YAML.load_file(file), file
+        result = new YAML.unsafe_load_file(file), file
         result.yaml_mode = true
         result
       else
