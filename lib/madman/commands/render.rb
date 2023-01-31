@@ -31,7 +31,7 @@ module Madman
 
         if outfile
           File.write outfile, output
-          say "Saved !txtgrn!#{outfile}"
+          say "Saved g`#{outfile}`"
         else
           puts output
         end

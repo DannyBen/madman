@@ -13,11 +13,12 @@ Gem::Specification.new do |s|
   s.executables = ['madman']
   s.homepage    = 'https://github.com/dannyben/madman'
   s.license     = 'MIT'
+
   s.required_ruby_version = '>= 3.0.0'
 
   s.add_runtime_dependency 'addressable', '~> 2.7'
   s.add_runtime_dependency 'coffee-script', '~> 2.4'
-  s.add_runtime_dependency 'colsole', '~> 0.7'
+  s.add_runtime_dependency 'colsole', '>= 0.8.1', '< 2'
   s.add_runtime_dependency 'commonmarker', '~> 0.23', '>= 0.23.4'
   s.add_runtime_dependency 'mister_bin', '~> 0.7'
   s.add_runtime_dependency 'octokit', '~> 6.0'
@@ -25,8 +26,8 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'requires', '~> 1.0'
   s.add_runtime_dependency 'sassc', '~> 2.4'
   s.add_runtime_dependency 'sinatra', '~> 3.0'
-  s.add_runtime_dependency 'slim', '~> 4.0'
+  s.add_runtime_dependency 'slim', '>= 4.0', '< 6'
   s.add_runtime_dependency 'string-direction', '~> 1.2'
-  
+
   s.metadata['rubygems_mfa_required'] = 'true'
 end

@@ -29,7 +29,7 @@ module Madman
           if File.exist? file
             say "Skipping #{file}"
           else
-            say "Creating !txtgrn!#{file}"
+            say "Creating g`#{file}`"
             h1 = "# #{File.basename dir}\n\n"
             File.write file, h1 unless args['--dry']
           end

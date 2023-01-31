@@ -55,9 +55,6 @@ action :changelog do
 end
 
 def command_output(command)
-  say "Executing !txtgrn!#{command}"
+  say "Executing g`#{command}`"
   "\n```\n" + "$ #{command}\n" + `#{command}`.chomp + "\n```\n"
 end
-
-require_relative 'debug.rb' if File.exist? 'debug.rb'
-

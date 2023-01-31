@@ -6,7 +6,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <style type="text/css">
+    <style>
       .markdown-body {
         box-sizing: border-box;
         min-width: 200px;

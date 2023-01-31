@@ -31,9 +31,9 @@ module Madman
         port = args['--port']
         bind = args['--bind']
 
-        say "Starting server at !undblu!localhost:#{port}!txtrst!"
+        say "Starting server at bu`localhost:#{port}`"
         if ENV['GITHUB_ACCESS_TOKEN']
-          say "To view the GitHub API version go to !undblu!localhost:#{port}/github!txtrst!"
+          say "To view the GitHub API version go to bu`localhost:#{port}/github`"
         end
         say ''
 

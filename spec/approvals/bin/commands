@@ -1,6 +1,6 @@
 Commands:
-  [1;32mnav      [0mAdd site-wide navigation links to README files
-  [1;32mpreview  [0mServe a markdown or YAML file using a local server
-  [1;32mreadme   [0mCreate README in all qualified sub directories
-  [1;32mrender   [0mRender markdown or YAML to HTML
-  [1;32mserve    [0mServe a markdown directory using a local server
+  [1m[32mnav      [0mAdd site-wide navigation links to README files
+  [1m[32mpreview  [0mServe a markdown or YAML file using a local server
+  [1m[32mreadme   [0mCreate README in all qualified sub directories
+  [1m[32mrender   [0mRender markdown or YAML to HTML
+  [1m[32mserve    [0mServe a markdown directory using a local server

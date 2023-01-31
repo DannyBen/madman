@@ -26,7 +26,7 @@ module Madman
         bind = args['--bind']
         renderer = args['--github'] ? :github : :default
 
-        say "Starting server at !undblu!localhost:#{port}!txtrst! using the !txtgrn!#{renderer}!txtrst! renderer\n"
+        say "Starting server at bu`localhost:#{port}` using the g`#{renderer}` renderer\n"
 
         Madman::DirServer.set bind: bind, port: port,
           dir: dir, renderer: renderer

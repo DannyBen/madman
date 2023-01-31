@@ -40,14 +40,14 @@ module Madman
       end
 
       def update_file(file)
-        say "Updating !txtgrn!#{file}"
+        say "Updating g`#{file}`"
         file_dir = File.dirname file
         toc = Madman::Navigation.new file_dir, depth: depth
         doc = Madman::Document.from_file file
         doc.inject toc.markdown, marker: marker, force: force?
 
         if verbose?
-          say word_wrap "  !txtblu!#{doc.text}"
+          say word_wrap "  b`#{doc.text}`"
           say ''
         end
 
