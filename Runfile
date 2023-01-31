@@ -1,35 +1,12 @@
-require "runfile-tasks"
 require "byebug"
 require "lp"
-require "colsole"
-require_relative 'lib/madman'
-include Colsole
+require 'madman/version'
 
 title   "Madman Developer Toolbelt"
 summary "Runfile tasks for building the Madman gem"
 version Madman::VERSION
 
-RunfileTasks::RubyGems.all 'madman'
-RunfileTasks::Testing.rspec
-
-usage_commands = {
-  'usage'        => 'madman',
-  'render'       => 'madman render',
-  'render-help'  => 'madman render --help',
-  'preview'      => 'madman preview',
-  'preview-help' => 'madman preview --help',
-  'serve'        => 'madman serve',
-  'serve-help'   => 'madman serve --help',
-  'nav'          => 'madman nav',
-  'nav-help'     => 'madman nav --help',
-  'readme'       => 'madman readme',
-  'readme-help'  => 'madman readme --help',
-}
-
-help   "Run interactive console"
-action :console, :c do
-  system "bundle exec bin/console"
-end
+import_gem 'runfile-tasks/gem', gemname: 'madman'
 
 help   "Inject usage to README"
 action :usage do
@@ -54,7 +31,25 @@ action :changelog do
   system "cat .changelog.old.md >> CHANGELOG.md"
 end
 
-def command_output(command)
-  say "Executing g`#{command}`"
-  "\n```\n" + "$ #{command}\n" + `#{command}`.chomp + "\n```\n"
+helpers do
+  def usage_commands
+    {
+      'usage'        => 'madman',
+      'render'       => 'madman render',
+      'render-help'  => 'madman render --help',
+      'preview'      => 'madman preview',
+      'preview-help' => 'madman preview --help',
+      'serve'        => 'madman serve',
+      'serve-help'   => 'madman serve --help',
+      'nav'          => 'madman nav',
+      'nav-help'     => 'madman nav --help',
+      'readme'       => 'madman readme',
+      'readme-help'  => 'madman readme --help',
+    }
+  end
+
+  def command_output(command)
+    say "Executing g`#{command}`"
+    "\n```\n" + "$ #{command}\n" + `#{command}`.chomp + "\n```\n"
+  end
 end
