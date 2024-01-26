@@ -2,7 +2,10 @@ module Madman
   module Renderers
     class Default
       def self.render(text, _opts = {})
-        CommonMarker.render_html text, %i[DEFAULT UNSAFE], [:table]
+        Commonmarker.to_html text, options: {
+          render:    { unsafe: true },
+          extension: { table: true },
+        }
       end
     end
   end
