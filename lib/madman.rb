@@ -2,7 +2,6 @@
 # ref: https://github.com/octokit/octokit.rb/blob/main/lib/octokit/warnable.rb
 ENV['OCTOKIT_SILENT'] = '1'
 
-require 'byebug' if ENV['BYEBUG']
 require 'commonmarker'
 require 'mister_bin'
 require 'octokit'

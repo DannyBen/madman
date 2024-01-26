@@ -5,7 +5,7 @@ module StringRefinements
     end
 
     def to_html
-      CommonMarker.render_html self, :DEFAULT, [:table]
+      Commonmarker.to_html self, options: { extension: { table: true } }
     end
   end
 end
