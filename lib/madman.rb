@@ -1,4 +1,4 @@
-# Octokit sometimes contaminates the termianl with warnings. Make it stop.
+# Octokit sometimes contaminates the terminal with warnings. Make it stop.
 # ref: https://github.com/octokit/octokit.rb/blob/main/lib/octokit/warnable.rb
 ENV['OCTOKIT_SILENT'] = '1'
 

@@ -11,7 +11,7 @@ describe Injector do
     end.new text
   end
 
-  let(:text) { 'header <!-- mark -->replacable<!-- mark --> footer' }
+  let(:text) { 'header <!-- mark -->replaceable<!-- mark --> footer' }
 
   describe '#inject' do
     context 'when the marker is not found in the text' do
