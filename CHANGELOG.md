@@ -1,6 +1,13 @@
 Change Log
 ========================================
 
+Untagged - Latest
+----------------------------------------
+
+- Update Sinatra, Octokit and Commonmarker
+- Drop support for Ruby 3.0
+
+
 v0.3.3 - 2023-01-31
 ----------------------------------------
 
@@ -48,6 +55,7 @@ v0.2.11 - 2020-12-03
 - Update puma to 5.1
 
 
+<!-- break v0.2.5 -->
 ## [v0.2.5](https://github.com/DannyBen/madman/tree/v0.2.5) (2019-01-04)
 [Full Changelog](https://github.com/DannyBen/madman/compare/v0.2.4...v0.2.5)
 
