@@ -1,16 +1,7 @@
 Madman
 ==================================================
 
-[![Gem Version](https://badge.fury.io/rb/madman.svg)](https://badge.fury.io/rb/madman)
-[![Build Status](https://github.com/DannyBen/madman/workflows/Test/badge.svg)](https://github.com/DannyBen/madman/actions?query=workflow%3ATest)
-[![Maintainability](https://api.codeclimate.com/v1/badges/506449ea988f5518425d/maintainability)](https://codeclimate.com/github/DannyBen/madman/maintainability)
-
-
----
-
 The Markdown Swiss Army Knife
-
----
 
 Installation
 --------------------------------------------------
