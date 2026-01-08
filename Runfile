@@ -1,5 +1,4 @@
-require "debug"
-require "lp"
+require 'lp'
 require 'madman/version'
 
 title   "Madman Developer Toolbelt"
@@ -7,6 +6,7 @@ summary "Runfile tasks for building the Madman gem"
 version Madman::VERSION
 
 import_gem 'runfile-tasks/gem', gemname: 'madman'
+import 'debug'
 
 help   "Inject usage to README"
 action :usage do
@@ -17,11 +17,6 @@ action :usage do
   end
 
   doc.save
-end
-
-help   "Count lines of code"
-action :cloc do
-  system "cloc . --exclude-dir coverage,spec,templates,tmp,dev --exclude-ext yml"
 end
 
 helpers do

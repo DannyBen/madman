@@ -1,6 +1,8 @@
 module Madman
   class ServerBase < Sinatra::Base
     set :views, File.expand_path('../views', __dir__)
+    set :protection, except: :host_authorization
+    set :host_authorization, permitted_hosts: []
 
     Slim::Engine.set_options pretty: true
 

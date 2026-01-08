@@ -5,7 +5,7 @@ module ArrayRefinements
     end
 
     def to_html
-      Commonmarker.to_html to_markdown, options: { extension: { table: true } }
+      Renderers::Default.render to_markdown
     end
   end
 end
