@@ -42,11 +42,10 @@ module Madman
 
     def tree!(data = nil, indent = 0, caption = 2)
       data ||= yaml
-      result = []
       caption = 6 if caption > 6
 
-      data.each do |key, value|
-        result.push render_pair key, value, indent, caption
+      result = data.map do |key, value|
+        render_pair key, value, indent, caption
       end
 
       result.join "\n"
