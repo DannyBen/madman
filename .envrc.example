@@ -1,0 +1,2 @@
+export CHANGELOG_COMMIT_URL=https://github.com/dannyben/madman/commit/%h
+export CHANGELOG_COMPARE_URL=https://github.com/dannyben/madman/compare/%s

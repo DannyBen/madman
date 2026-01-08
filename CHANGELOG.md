@@ -1,58 +1,67 @@
-Change Log
+Changelog
 ========================================
 
-Untagged - Latest
+v0.3.4 - 2026-01-08
 ----------------------------------------
 
-- Update Sinatra, Octokit and Commonmarker
-- Drop support for Ruby 3.0
+- Update Sinatra, Octokit and Commonmarker [`0726357`](https://github.com/dannyben/madman/commit/0726357)
+- Drop support for Ruby 3.0 [`6b9079c`](https://github.com/dannyben/madman/commit/6b9079c)
+- Update dependencies [`47cffc0`](https://github.com/dannyben/madman/commit/47cffc0)
+- Compare [`v0.3.3..v0.3.4`](https://github.com/dannyben/madman/compare/v0.3.3..v0.3.4)
 
 
 v0.3.3 - 2023-01-31
 ----------------------------------------
 
-- Upgrade dependencies
+- Upgrade dependencies [`483d99b`](https://github.com/dannyben/madman/commit/483d99b)
+- Compare [`v0.3.2..v0.3.3`](https://github.com/dannyben/madman/compare/v0.3.2..v0.3.3)
 
 
 v0.3.2 - 2023-01-20
 ----------------------------------------
 
-- Loosen dependency requirements
+- Loosen dependency requirements [`08390d2`](https://github.com/dannyben/madman/commit/08390d2)
+- Compare [`v0.3.1..v0.3.2`](https://github.com/dannyben/madman/compare/v0.3.1..v0.3.2)
 
 
 v0.3.1 - 2023-01-16
 ----------------------------------------
 
-- Update dependency versions
+- Update dependency versions [`308bc44`](https://github.com/dannyben/madman/commit/308bc44)
+- Compare [`v0.3.0..v0.3.1`](https://github.com/dannyben/madman/compare/v0.3.0..v0.3.1)
 
 
 v0.3.0 - 2022-12-12
 ----------------------------------------
 
-- Fix YAML loading for Ruby 3.x
-- Drop support for Ruby 2.7
+- Fix YAML loading for Ruby 3.x [`07f7ed2`](https://github.com/dannyben/madman/commit/07f7ed2)
+- Drop support for Ruby 2.7 [`a6ff3c4`](https://github.com/dannyben/madman/commit/a6ff3c4)
+- Compare [`v0.2.13..v0.3.0`](https://github.com/dannyben/madman/compare/v0.2.13..v0.3.0)
 
 
 v0.2.13 - 2022-12-05
 ----------------------------------------
 
-- Drop support for Ruby 2.5
-- Drop support for Ruby 2.6
-- Update Sinatra to ~> 3.0
-- Allow Puma 6
+- Drop support for Ruby 2.5 [`a6ff520`](https://github.com/dannyben/madman/commit/a6ff520)
+- Drop support for Ruby 2.6 [`327cdc1`](https://github.com/dannyben/madman/commit/327cdc1)
+- Update Sinatra to ~> 3.0 [`208b32e`](https://github.com/dannyben/madman/commit/208b32e)
+- Allow Puma 6 [`998bb61`](https://github.com/dannyben/madman/commit/998bb61)
+- Compare [`v0.2.12..v0.2.13`](https://github.com/dannyben/madman/compare/v0.2.12..v0.2.13)
 
 
 v0.2.12 - 2020-12-27
 ----------------------------------------
 
-- Replace deprecated sass with sassc
+- Replace deprecated sass with sassc [`45144b5`](https://github.com/dannyben/madman/commit/45144b5)
+- Compare [`v0.2.11..v0.2.12`](https://github.com/dannyben/madman/compare/v0.2.11..v0.2.12)
 
 
 v0.2.11 - 2020-12-03
 ----------------------------------------
 
-- Update to puma 5.x
-- Update puma to 5.1
+- Update to puma 5.x [`d91e6d3`](https://github.com/dannyben/madman/commit/d91e6d3)
+- Update puma to 5.1 [`38b849b`](https://github.com/dannyben/madman/commit/38b849b)
+- Compare [`v0.2.10..v0.2.11`](https://github.com/dannyben/madman/compare/v0.2.10..v0.2.11)
 
 
 <!-- break v0.2.5 -->
