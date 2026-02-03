@@ -13,9 +13,9 @@
 <text x='26' y='77' class='label'>PROJECT MATURITY</text>
 <text x='26' y='102' class='value' fill='#d16c00'>Legacy</text>
 <rect x='208' y='52' width='180' height='65' class='card' />
-<rect x='208' y='52' width='180' height='6' fill='#1a7f37' />
+<rect x='208' y='52' width='180' height='6' fill='#d16c00' />
 <text x='218' y='77' class='label'>API POLICY</text>
-<text x='218' y='102' class='value' fill='#1a7f37'>SemVer</text>
+<text x='218' y='102' class='value' fill='#d16c00'>Unstable</text>
 <rect x='400' y='52' width='180' height='65' class='card' />
 <rect x='400' y='52' width='180' height='6' fill='#cc3344' />
 <text x='410' y='77' class='label'>MAINTENANCE STATUS</text>
