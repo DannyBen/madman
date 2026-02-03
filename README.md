@@ -1,6 +1,8 @@
 Madman
 ==================================================
 
+![repocard](repocard.svg)
+
 The Markdown Swiss Army Knife
 
 Installation
