@@ -1,7 +1,7 @@
 Madman
 ==================================================
 
-![repocard](repocard.svg)
+![repocard](https://repocard.dannyben.com/svg/madman.svg)
 
 The Markdown Swiss Army Knife
 
